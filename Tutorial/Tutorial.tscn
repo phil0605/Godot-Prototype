@@ -8,14 +8,60 @@
 
 [node name="Tutorial" type="Node"]
 
-[node name="BackgroundLeft" type="TextureRect" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundRight" type="TextureRect" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 3 )
+expand = true
+
+[node name="Ordner6_rot_rechts" parent="CanvasLayer/BackgroundRight" instance=ExtResource( 4 )]
+margin_left = 40.0
+margin_top = 515.0
+margin_right = 1320.0
+margin_bottom = 1795.0
+rect_rotation = -90.0
+rect_scale = Vector2( 0.075, 0.075 )
+expand = true
+
+[node name="TR_rechts" parent="CanvasLayer/BackgroundRight" instance=ExtResource( 2 )]
+margin_left = 405.0
+margin_top = 75.0
+margin_right = 1495.0
+margin_bottom = 1355.0
+rect_rotation = -90.0
+expand = true
+
+[node name="Ordner_rechts1" parent="CanvasLayer/BackgroundRight" instance=ExtResource( 6 )]
+margin_left = 40.0
+margin_top = 390.0
+margin_right = 1320.0
+margin_bottom = 1670.0
+rect_rotation = -90.0
+rect_scale = Vector2( 0.075, 0.075 )
+expand = true
+
+[node name="Ordner_rechts2" parent="CanvasLayer/BackgroundRight" instance=ExtResource( 6 )]
+margin_left = 140.0
+margin_top = 515.0
+margin_right = 1420.0
+margin_bottom = 1795.0
+rect_rotation = -90.0
+rect_scale = Vector2( 0.075, 0.075 )
+expand = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="BackgroundLeft" type="TextureRect" parent="CanvasLayer2"]
 anchor_right = 0.5
 anchor_bottom = 1.0
 rect_clip_content = true
 texture = ExtResource( 1 )
 expand = true
 
-[node name="Ordner_rot_links" parent="BackgroundLeft" instance=ExtResource( 4 )]
+[node name="Ordner_rot_links" parent="CanvasLayer2/BackgroundLeft" instance=ExtResource( 4 )]
 margin_left = 460.0
 margin_top = 25.0
 margin_right = 1740.0
@@ -23,7 +69,7 @@ margin_bottom = 1305.0
 rect_rotation = 90.0
 rect_scale = Vector2( 0.075, 0.075 )
 
-[node name="Ordner_links1" parent="BackgroundLeft" instance=ExtResource( 6 )]
+[node name="Ordner_links1" parent="CanvasLayer2/BackgroundLeft" instance=ExtResource( 6 )]
 margin_left = 360.0
 margin_top = 25.0
 margin_right = 1640.0
@@ -31,7 +77,7 @@ margin_bottom = 1305.0
 rect_rotation = 90.0
 rect_scale = Vector2( 0.075, 0.075 )
 
-[node name="Ordner_links2" parent="BackgroundLeft" instance=ExtResource( 6 )]
+[node name="Ordner_links2" parent="CanvasLayer2/BackgroundLeft" instance=ExtResource( 6 )]
 margin_left = 460.0
 margin_top = 150.0
 margin_right = 1740.0
@@ -39,47 +85,9 @@ margin_bottom = 1430.0
 rect_rotation = 90.0
 rect_scale = Vector2( 0.075, 0.075 )
 
-[node name="TR_links" parent="BackgroundLeft" instance=ExtResource( 2 )]
+[node name="TR_links" parent="CanvasLayer2/BackgroundLeft" instance=ExtResource( 2 )]
 margin_left = 75.0
 margin_top = 465.0
 margin_right = 1165.0
 margin_bottom = 1745.0
 rect_rotation = 90.0
-
-[node name="BackgroundRight" type="TextureRect" parent="."]
-anchor_left = 0.5
-anchor_right = 1.0
-anchor_bottom = 1.0
-texture = ExtResource( 3 )
-expand = true
-
-[node name="Ordner6_rot_rechts" parent="BackgroundRight" instance=ExtResource( 4 )]
-margin_left = 40.0
-margin_top = 515.0
-margin_right = 1320.0
-margin_bottom = 1795.0
-rect_rotation = -90.0
-rect_scale = Vector2( 0.075, 0.075 )
-
-[node name="TR_rechts" parent="BackgroundRight" instance=ExtResource( 2 )]
-margin_left = 405.0
-margin_top = 75.0
-margin_right = 1495.0
-margin_bottom = 1355.0
-rect_rotation = -90.0
-
-[node name="Ordner_rechts1" parent="BackgroundRight" instance=ExtResource( 6 )]
-margin_left = 40.0
-margin_top = 390.0
-margin_right = 1320.0
-margin_bottom = 1670.0
-rect_rotation = -90.0
-rect_scale = Vector2( 0.075, 0.075 )
-
-[node name="Ordner_rechts2" parent="BackgroundRight" instance=ExtResource( 6 )]
-margin_left = 140.0
-margin_top = 515.0
-margin_right = 1420.0
-margin_bottom = 1795.0
-rect_rotation = -90.0
-rect_scale = Vector2( 0.075, 0.075 )
