@@ -79,16 +79,11 @@ func _on_Tutorial_ready():
 	_on_Minimize_pressed()
 	
 
-func _on_TaschenrechnerIcon_pressed():
-	hide()
-	var children = $CanvasLayer.get_children()
-	for child in children.size():
-		$CanvasLayer.get_child(child).show()
-
-
-func _on_Ordner_rot_links_pressed():
-	var children = $CanvasLayer.get_children()
-	
+func _on_TR_links_pressed():
 	show()
+	var children = $CanvasLayer.get_children()
 	for child in children.size():
 		$CanvasLayer.get_child(child).show()
+		
+func _on_TR_rechts_pressed():
+	_on_TR_links_pressed()
