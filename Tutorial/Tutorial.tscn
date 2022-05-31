@@ -97,5 +97,6 @@ margin_left = -480.0
 margin_right = -180.0
 
 [connection signal="ready" from="." to="BackgroundLeft/Input_field" method="_on_Tutorial_ready"]
+[connection signal="ready" from="." to="BackgroundRight/Input_field" method="_on_Tutorial_ready"]
 [connection signal="pressed" from="BackgroundLeft/TR_links" to="BackgroundLeft/Input_field" method="_on_TR_links_pressed"]
 [connection signal="pressed" from="BackgroundRight/TR_rechts" to="BackgroundLeft/Input_field" method="_on_TR_rechts_pressed"]
