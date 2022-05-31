@@ -86,4 +86,7 @@ func _on_TR_links_pressed():
 		$CanvasLayer.get_child(child).show()
 		
 func _on_TR_rechts_pressed():
-	_on_TR_links_pressed()
+	show()
+	var children = $CanvasLayer.get_children()
+	for child in children.size():
+		$CanvasLayer.get_child(child).show()
