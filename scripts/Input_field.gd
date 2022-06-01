@@ -1,20 +1,15 @@
-extends Tabs
+extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 
 var password = ""
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$CanvasLayer/Input_field_label.text = password
+	$ColorRect/Input_field_label.add_color_override("font_color", Color.black)
+	$ColorRect/Input_field_label.text = password
 
 
 func _on_Button_pressed():
@@ -22,13 +17,13 @@ func _on_Button_pressed():
 
 
 func _on_Minimize_pressed():
-	var tab = $CanvasLayer.get_parent()
+	var tab = $ColorRect.get_parent()
 	tab.visible = false # Replace with function body.
 	
-	var children = $CanvasLayer.get_children()
+	#var children = $ColorRect.get_children()
 	
-	for child in children.size():
-		$CanvasLayer.get_child(child).hide()
+	#for child in children.size():
+		#$ColorRect.get_child(child).hide()
 
 
 func _on_Button_entf_pressed():
@@ -81,9 +76,14 @@ func _on_Tutorial_ready():
 
 func _on_TR_links_pressed():
 	show()
-	var children = $CanvasLayer.get_children()
+	var children = $ColorRect.get_children()
 	for child in children.size():
-		$CanvasLayer.get_child(child).show()
+		$ColorRect.get_child(child).show()
 		
 func _on_TR_rechts_pressed():
 	_on_TR_links_pressed()
+	
+func make_visible():
+	var tab = $ColorRect.get_parent()
+	tab.visible = true
+
