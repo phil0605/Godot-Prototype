@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Prototype"
-run/main_scene="res://Tutorial/Tutorial.tscn"
+run/main_scene="res://scenes/Tutorial.tscn"
 config/icon="res://icon.png"
 
 [display]
