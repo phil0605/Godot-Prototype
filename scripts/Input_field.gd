@@ -27,6 +27,7 @@ func _on_Button_entf_pressed():
 func _on_Button_enter_pressed():
 	var tutorial_node = get_parent().get_parent().get_parent()
 	var solution = tutorial_node.getPassword()
+	var time = tutorial_node.getTime()
 	
 	if(solution == password):
 		var tab = $ColorRect.get_parent()
@@ -44,17 +45,32 @@ func _on_Button_enter_pressed():
 		$Trials.add_text(" Versuche übrig. Für jeden Versuch gibt es 10 Sekunden Strafe.")
 		$Trials.visible = true
 		$TrialTimer.start()
+		time += 10
+		tutorial_node.setTime(time)
 		
 		if(trials == 1):
 			$Trials.add_text("Die Lösung versteckt sich in einem Instagrampost, der sein Geburtsdatum als Passwort benutzt")
 			
 		if(trials == 0):
 			password = solution
-			var time = tutorial_node.getTime()
-			time += 60
+			time += 50
 			tutorial_node.setTime(time)
 			$TrialTimer.stop()
 			$Trials.clear()
+			
+			$ColorRect/Button_0.disabled = true
+			$ColorRect/Button_1.disabled = true
+			$ColorRect/Button_2.disabled = true
+			$ColorRect/Button_3.disabled = true
+			$ColorRect/Button_4.disabled = true
+			$ColorRect/Button_5.disabled = true
+			$ColorRect/Button_6.disabled = true
+			$ColorRect/Button_7.disabled = true
+			$ColorRect/Button_8.disabled = true
+			$ColorRect/Button_9.disabled = true
+			$ColorRect/Button_entf.disabled = true
+			$ColorRect/Minimize.disabled = true
+			
 			$Trials.add_text("Da du keine Versuche mehr hast gibt es eine Minute Strafe. Drücke ")
 			$Trials.push_color(Color.green)
 			$Trials.add_text("Enter")
