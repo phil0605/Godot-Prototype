@@ -35,6 +35,7 @@ func _on_Button_enter_pressed():
 		$Trials.clear()
 		var message = "Ihr habt das Level geschafft"
 		tutorial_node.setCongratMessage(message)
+		tutorial_node.stopTime()
 		
 	else:
 		$Trials.clear()
@@ -52,7 +53,7 @@ func _on_Button_enter_pressed():
 			$Trials.add_text("Die Lösung versteckt sich in einem Instagrampost, der sein Geburtsdatum als Passwort benutzt")
 			
 		if(trials == 0):
-			password = solution
+			#password = solution
 			time += 50
 			tutorial_node.setTime(time)
 			$TrialTimer.stop()
@@ -76,6 +77,10 @@ func _on_Button_enter_pressed():
 			$Trials.add_text("Enter")
 			$Trials.push_color(Color.red)
 			$Trials.add_text(" um fortzufahren")
+			
+			var tab = $ColorRect.get_parent()
+			tab.visible = false
+			trials = 3
 			
 		trials = trials - 1
 
@@ -115,18 +120,9 @@ func _on_Button_9_pressed():
 	password = password + "9"
 
 
-func _on_Tutorial_ready():
-	_on_Minimize_pressed()
+#func _on_Tutorial_ready():
+	#_on_Minimize_pressed()
 	
-
-func _on_TR_links_pressed():
-	show()
-	var children = $ColorRect.get_children()
-	for child in children.size():
-		$ColorRect.get_child(child).show()
-		
-func _on_TR_rechts_pressed():
-	_on_TR_links_pressed()
 	
 func make_visible():
 	var tab = $ColorRect.get_parent()

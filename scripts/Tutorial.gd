@@ -7,6 +7,7 @@ extends Node
 var time
 var insta_password = "17051997"
 var congrat_message = ""
+var solved = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,7 +19,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	time = time + delta
+	if (!solved):
+		time = time + delta
 	
 	var seconds:float = fmod(time , 60.0)
 	var minutes:int   = int(time / 60.0) % 60
@@ -39,6 +41,9 @@ func setTime(new_time):
 
 func getTime():
 	return time
+
+func stopTime():
+	solved = true
 	
 func setCongratMessage(new_congrat_message):
 	congrat_message = new_congrat_message
