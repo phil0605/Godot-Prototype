@@ -41,7 +41,7 @@ func _on_Button_enter_pressed():
 	if(solution == password):
 		var tab = $ColorRect.get_parent()
 		tab.visible = false
-		var message = "Ihr habt das Level geschafft"
+		var message = "Glückwunsch. Der Fall wurde gelöst."
 		tutorial_node.setCongratMessage(message)
 		tutorial_node.stopTime()
 		
@@ -65,10 +65,10 @@ func _on_Button_enter_pressed():
 			tutorial_node.setTime(time)
 			$Trials.clear()
 			
-			$Trials.add_text("Da du keine Versuche mehr hast, gibt es eine Minute Strafe. Deine Versuche werden zurückgesetzt.")
+			$Trials.add_text("Da keine Versuche mehr übrig sind, gibt es eine Minute Strafe. Deine Versuche werden zurückgesetzt.")
 			trials = 3
 			
-		trials = trials - 1
+		trials -= 1
 
 
 func _on_Button_1_pressed():
