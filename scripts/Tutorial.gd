@@ -33,7 +33,6 @@ func _process(delta):
 	
 	if (minutes == 20):
 		solved = true
-		
 		var lostGame = "Zeitüberschreitung! Der Fall wurde nicht gelöst."
 		setCongratMessage(lostGame)
 	
