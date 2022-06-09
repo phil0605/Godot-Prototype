@@ -31,6 +31,11 @@ func _process(delta):
 	$CongratulationLabelLeft.text = congrat_message
 	$CongratulationLabelRight.text = congrat_message
 	
+	if (minutes == 20):
+		solved = true
+		
+		var lostGame = "Zeitüberschreitung! Level nicht geschafft."
+		setCongratMessage(lostGame)
 	
 
 func getPassword():

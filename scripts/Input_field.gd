@@ -10,6 +10,14 @@ func _ready():
 func _process(delta):
 	$ColorRect/Input_field_label.add_color_override("font_color", Color.black)
 	$ColorRect/Input_field_label.text = password
+	
+	# checks, whether time's up and we need to close the input_field
+	var tutorial_node = get_parent().get_parent().get_parent()
+	var time = tutorial_node.getTime()
+	var minutes:int   = int(time / 60.0) % 60
+	if (minutes >= 20.0):
+		var tab = $ColorRect.get_parent()
+		tab.visible = false
 
 
 func _on_Button_pressed():
@@ -56,19 +64,6 @@ func _on_Button_enter_pressed():
 			time += 50
 			tutorial_node.setTime(time)
 			$Trials.clear()
-			
-			#$ColorRect/Button_0.disabled = true
-			#$ColorRect/Button_1.disabled = true
-			#$ColorRect/Button_2.disabled = true
-			#$ColorRect/Button_3.disabled = true
-			#$ColorRect/Button_4.disabled = true
-			#$ColorRect/Button_5.disabled = true
-			#$ColorRect/Button_6.disabled = true
-			#$ColorRect/Button_7.disabled = true
-			#$ColorRect/Button_8.disabled = true
-			#$ColorRect/Button_9.disabled = true
-			#$ColorRect/Button_entf.disabled = true
-			#$ColorRect/Minimize.disabled = true
 			
 			$Trials.add_text("Da du keine Versuche mehr hast, gibt es eine Minute Strafe. Deine Versuche werden zurückgesetzt.")
 			trials = 3
