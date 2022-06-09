@@ -31,6 +31,15 @@ func _process(delta):
 	$CongratulationLabelLeft.text = congrat_message
 	$CongratulationLabelRight.text = congrat_message
 	
+	# nach dem erfolgreichen Lösen des Falls werden alle Objekte ausgeblendet
+	if(solved):
+		var left = $BackgroundLeft.get_children()
+		for o in left:
+			o.visible = false
+		var right = $BackgroundRight.get_children()
+		for o in right:
+			o.visible = false
+	
 	if (minutes == 20):
 		solved = true
 		var lostGame = "Zeitüberschreitung! Der Fall wurde nicht gelöst."

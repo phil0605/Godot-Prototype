@@ -6,7 +6,7 @@
 [ext_resource path="res://scenes/Input_field.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Ordner_rot.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/notes_password.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/Tab_Insagram.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Tab_Instagram.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scripts/Tutorial.gd" type="Script" id=8]
 
 [sub_resource type="StyleBoxFlat" id=2]
