@@ -41,7 +41,7 @@ func _on_Button_enter_pressed():
 	if(solution == password):
 		var tab = $ColorRect.get_parent()
 		tab.visible = false
-		var message = "Glückwunsch. Der Fall wurde gelöst."
+		var message = "Glückwunsch! Der Fall wurde gelöst."
 		tutorial_node.setCongratMessage(message)
 		tutorial_node.stopTime()
 		
@@ -57,7 +57,7 @@ func _on_Button_enter_pressed():
 		tutorial_node.setTime(time)
 		
 		if(trials == 1):
-			$Trials.add_text("Die Lösung versteckt sich in einem Instagrampost, der sein Geburtsdatum als Passwort benutzt")
+			$Trials.add_text("Die Lösung versteckt sich in einem Instagrampost, der sein Geburtsdatum als Passwort benutzt.")
 			
 		if(trials == 0):
 			#password = solution
