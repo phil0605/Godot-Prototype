@@ -16,7 +16,7 @@ var dialog2 = ["Das da oben ist ein Timer.",
 var dialog3 = ["Tippe auf diesen Ordner!"]
 
 #Erklärung Tabs
-var dialog4 = ["Dieses Fenster kannst du beliebig bewegen und wieder schließen bzw öffnen!",
+var dialog4 = ["In jedem Ordner versteckt sich ein Fenster, dass du beliebig bewegen und wieder schließen bzw. öffnen kannst!",
 				 "Aber das Wichtigste ist, dass du aus ihnen Informationen herausziehen kannst."]
 
 #Übergang Ordner Rot
