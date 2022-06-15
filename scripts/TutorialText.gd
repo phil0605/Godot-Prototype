@@ -8,26 +8,27 @@ var dialog1 = ["Willkommen ihr Daten Detektive! (tippe)",
 #Erklärung Timer und Score
 var dialog2 = ["Das da oben ist ein Timer.", 
 				"Der zeigt euch an, wie lange ihr für diesen Fall bisher gebraucht habt.",
-				"Außerdem fällt eure Belohnung am Ende größer aus, wenn ihr schnell seid.",
+				"Je schneller ihr seid, desto höher fällt eure Belohnung am Ende aus. Doch soltet ihr 20 Minuten überschreiten, seid ihr gescheitert.",
 				"Die Zeit läuft, sobald euer Fall startet.",
-				"Gehen wir zu nächsten Punkt über."]
+				"Gehen wir zum nächsten Punkt über."]
 
 #Übergang Ordner1
 var dialog3 = ["Tippe auf diesen Ordner!"]
 
 #Erklärung Tabs
 var dialog4 = ["Dieses Fenster kannst du beliebig bewegen und wieder schließen bzw öffnen!",
-				 "Aber das wichtigste ist, dass du aus ihnen Informationen herausziehen kannst."]
+				 "Aber das Wichtigste ist, dass du aus ihnen Informationen herausziehen kannst."]
 
 #Übergang Ordner Rot
 var dialog5 = [ "Dies hier ist die zweite Art von Ordner. Tippe diesen doch auch mal an!"]
 
 #Erklärung Passwort, Versuche/Hilfe und Start für Fall
-var dialog6 = ["Bla Bla Bla",
-				"Bla Bla Bla",
-				"Bla Bla Bla",
+var dialog6 = ["Das ist ein Eingabefeld. In dieses müsst ihr ein Passwort eingeben, um weiter zu kommen oder einen Fall zu lösen.",
+				"Der rote Ordner ist immer der letzte Ordner eines jeden Levels.",
+				"Doch Achtung! Für jeden Fehlversuch gibt es eine Zeitstrafe von 10s.",
+				"Nach drei gescheiterten Versuchen ist es sogar eine Starfminute. Seid also wachdsam.",
 				"Das war alles, was ich euch beibringen kann, ab jetzt seid ihr auf euch alleine gestellt.",
-				"Jetzt geht es los, viel Erfolg!"]
+				"Viel Erfolg! Die Zeit startet jetzt."]
 
 var page1 = 0
 var page2 = 0
