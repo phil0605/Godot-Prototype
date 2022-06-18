@@ -1,0 +1,132 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/Pausemenu.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Musik_Sounds/Menu_Swap.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 61
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.741176, 0.192157 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.741176, 0.192157 )
+
+[node name="Pausemenu" type="ColorRect"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.913725 )
+script = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Menu1" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 180.0
+margin_top = 89.0
+margin_right = 780.0
+margin_bottom = 450.0
+
+[node name="Text" type="Label" parent="CenterContainer/Menu1"]
+margin_right = 600.0
+margin_bottom = 74.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.411765, 0.411765, 0.411765, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Kaffee Pause!"
+align = 1
+
+[node name="MINDESTABSTAND" type="Control" parent="CenterContainer/Menu1"]
+margin_top = 78.0
+margin_right = 600.0
+margin_bottom = 138.0
+rect_min_size = Vector2( 0, 60 )
+rect_pivot_offset = Vector2( -861, -116 )
+
+[node name="WeiterButton" type="Button" parent="CenterContainer/Menu1"]
+pause_mode = 2
+margin_top = 142.0
+margin_right = 600.0
+margin_bottom = 191.0
+rect_min_size = Vector2( 600, 0 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Weiter"
+
+[node name="OptionsButton" type="Button" parent="CenterContainer/Menu1"]
+pause_mode = 2
+margin_top = 195.0
+margin_right = 600.0
+margin_bottom = 244.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 4 )
+text = "Optionen"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/Menu1"]
+pause_mode = 2
+margin_top = 248.0
+margin_right = 600.0
+margin_bottom = 297.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Beenden"
+
+[node name="MINDESTABSTAND2" type="Control" parent="CenterContainer/Menu1"]
+margin_top = 301.0
+margin_right = 600.0
+margin_bottom = 361.0
+rect_min_size = Vector2( 0, 60 )
+
+[node name="Optionen" type="VBoxContainer" parent="CenterContainer"]
+visible = false
+margin_left = 335.0
+margin_top = 142.0
+margin_right = 625.0
+margin_bottom = 397.0
+
+[node name="Text" type="Label" parent="CenterContainer/Optionen"]
+margin_right = 290.0
+margin_bottom = 74.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.411765, 0.411765, 0.411765, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Optionen"
+align = 1
+
+[node name="MINDESTABSTAND" type="Control" parent="CenterContainer/Optionen"]
+margin_top = 78.0
+margin_right = 290.0
+margin_bottom = 138.0
+rect_min_size = Vector2( 0, 60 )
+rect_pivot_offset = Vector2( -861, -116 )
+
+[node name="ZurückButton" type="Button" parent="CenterContainer/Optionen"]
+pause_mode = 2
+margin_top = 142.0
+margin_right = 290.0
+margin_bottom = 191.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "Zurück"
+
+[node name="MINDESTABSTAND2" type="Control" parent="CenterContainer/Optionen"]
+margin_top = 195.0
+margin_right = 290.0
+margin_bottom = 255.0
+rect_min_size = Vector2( 0, 60 )
+
+[node name="Menu_Swap" parent="." instance=ExtResource( 3 )]
+position = Vector2( 29, 441 )
+
+[connection signal="pressed" from="CenterContainer/Menu1/WeiterButton" to="." method="_on_WeiterButton_pressed"]
+[connection signal="pressed" from="CenterContainer/Menu1/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="CenterContainer/Menu1/QuitButton" to="." method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="CenterContainer/Optionen/ZurückButton" to="." method="_on_ZurckButton_pressed"]

@@ -14,6 +14,10 @@ config/name="Prototype"
 run/main_scene="res://scenes/hauptmenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SceneTransition="*res://scenes/Scene_Transition.tscn"
+
 [display]
 
 window/size/width=960

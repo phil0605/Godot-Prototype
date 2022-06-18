@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/page-turning-38628.mp3-37598c8757dba8d82e6a68805b665224.mp3str"
+
+[deps]
+
+source_file="res://assets/MusikSounds/page-turning-38628.mp3"
+dest_files=[ "res://.import/page-turning-38628.mp3-37598c8757dba8d82e6a68805b665224.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

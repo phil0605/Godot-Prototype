@@ -12,6 +12,16 @@ var tutend = false
 
 # Called when the node enters the scene tree for the first time.
 #func _ready():
+func _ready():
+	$"BGM Tutorial".play()
+
+func _input(event):
+	if event is InputEventScreenTouch:
+		if event.pressed:
+			$Click.play()
+			$TippEffekt.global_position = event.position
+			$TippEffekt.emitting =  true
+
 func start_now():
 	time = 0
 	$ScoreTimer.start()

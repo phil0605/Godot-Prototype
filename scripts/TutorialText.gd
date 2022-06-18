@@ -8,7 +8,8 @@ var dialog1 = ["Willkommen ihr Daten Detektive! (tippe)",
 #Erklärung Timer und Score
 var dialog2 = ["Das da oben ist ein Timer.", 
 				"Der zeigt euch an, wie lange ihr für diesen Fall bisher gebraucht habt.",
-				"Je schneller ihr seid, desto höher fällt eure Belohnung am Ende aus. Doch soltet ihr das jeweilige Zeitlimit überschreiten, seid ihr gescheitert. Hier sind es 20 Minuten.",
+				"Je schneller ihr seid, desto höher fällt eure Belohnung am Ende aus.", 
+				"Doch soltet ihr das jeweilige Zeitlimit überschreiten, seid ihr gescheitert. Hier sind es 20 Minuten.",
 				"Die Zeit läuft, sobald euer Fall startet.",
 				"Gehen wir zum nächsten Punkt über."]
 
@@ -16,7 +17,7 @@ var dialog2 = ["Das da oben ist ein Timer.",
 var dialog3 = ["Tippe auf diesen Ordner!"]
 
 #Erklärung Tabs
-var dialog4 = ["In jedem Ordner versteckt sich ein Fenster, dass du beliebig bewegen und wieder schließen bzw. öffnen kannst!",
+var dialog4 = ["In jedem Ordner versteckt sich ein Fenster, dass du beliebig bewegen, wieder schließen und öffnen kannst!",
 				 "Aber das Wichtigste ist, dass du aus ihnen Informationen herausziehen kannst."]
 
 #Übergang Ordner Rot
@@ -63,7 +64,7 @@ onready var main = get_node("../")
 #onready var or_area = get_node("../Tut_Ordner_Box")
 
 # Called when the node enters the scene tree for the first time.
-func start_now():
+func _ready():
 	load_dialog1()
 	
 func _process(_delta):
@@ -72,6 +73,7 @@ func _process(_delta):
 
 func _on_Tween_tween_completed(_object, _key):
 	finished = true
+	$Textblub.stop()
 
 func _on_TutBox_input_event(viewport, event, shape_idx):
 	if event is InputEventScreenTouch:
@@ -150,6 +152,7 @@ func load_dialog1():
 	if page1 < dialog1.size():
 		if $RichTextLabel.percent_visible == 1:
 			finished = false
+			$Textblub.play()
 			$RichTextLabel.bbcode_text = dialog1[page1]
 			$RichTextLabel2.bbcode_text = dialog1[page1]
 			$RichTextLabel.percent_visible = 0
@@ -175,6 +178,7 @@ func load_dialog2():
 	if page2 < dialog2.size():
 		if $RichTextLabel.percent_visible == 1:
 			finished = false
+			$Textblub.play()
 			$RichTextLabel.bbcode_text = dialog2[page2]
 			$RichTextLabel2.bbcode_text = dialog2[page2]
 			$RichTextLabel.percent_visible = 0
@@ -202,6 +206,7 @@ func load_dialog3():
 	if page3 < dialog3.size():
 		if $RichTextLabel.percent_visible == 1:
 			finished = false
+			$Textblub.play()
 			$RichTextLabel.bbcode_text = dialog3[page3]
 			$RichTextLabel2.bbcode_text = dialog3[page3]
 			$RichTextLabel.percent_visible = 0
@@ -224,6 +229,7 @@ func load_dialog4():
 	if page4 < dialog4.size():
 		if $RichTextLabel.percent_visible == 1:
 			finished = false
+			$Textblub.play()
 			$RichTextLabel.bbcode_text = dialog4[page4]
 			$RichTextLabel2.bbcode_text = dialog4[page4]
 			$RichTextLabel.percent_visible = 0
@@ -250,6 +256,7 @@ func load_dialog5():
 	if page5 < dialog5.size():
 		if $RichTextLabel.percent_visible == 1:
 			finished = false
+			$Textblub.play()
 			$RichTextLabel.bbcode_text = dialog5[page5]
 			$RichTextLabel2.bbcode_text = dialog5[page5]
 			$RichTextLabel.percent_visible = 0
@@ -272,6 +279,7 @@ func load_dialog6():
 	if page6 < dialog6.size():
 		if $RichTextLabel.percent_visible == 1:
 			finished = false
+			$Textblub.play()
 			$RichTextLabel.bbcode_text = dialog6[page6]
 			$RichTextLabel2.bbcode_text = dialog6[page6]
 			$RichTextLabel.percent_visible = 0

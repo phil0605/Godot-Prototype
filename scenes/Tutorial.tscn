@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://assets/background.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/background Kopie.jpg" type="Texture" id=2]
@@ -9,10 +9,14 @@
 [ext_resource path="res://scenes/Tab_Instagram.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scripts/Tutorial.gd" type="Script" id=8]
 [ext_resource path="res://scenes/WikiEintrag.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/DialogPfeil.png" type="Texture" id=10]
+[ext_resource path="res://scenes/TippEffekt.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Pfeil.png" type="Texture" id=11]
 [ext_resource path="res://scripts/TutorialText.gd" type="Script" id=12]
-[ext_resource path="res://icon.png" type="Texture" id=13]
+[ext_resource path="res://assets/auftraggeber.png" type="Texture" id=13]
+[ext_resource path="res://assets/MusikSounds/rclick-13693.mp3" type="AudioStream" id=14]
+[ext_resource path="res://assets/MusikSounds/detective-15646.mp3" type="AudioStream" id=15]
+[ext_resource path="res://assets/MusikSounds/text-sound-4-30218.mp3" type="AudioStream" id=16]
+[ext_resource path="res://scenes/Pausemenu.tscn" type="PackedScene" id=17]
 
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 1, 1, 1, 1 )
@@ -20,7 +24,7 @@ bg_color = Color( 1, 1, 1, 1 )
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 1, 1, 1, 1 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=24]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -35,7 +39,7 @@ tracks/0/keys = {
 "values": [ Vector2( 32, 504 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=25]
 resource_name = "idle"
 loop = true
 tracks/0/type = "value"
@@ -51,7 +55,7 @@ tracks/0/keys = {
 "values": [ Vector2( 32, 504 ), Vector2( 22, 504 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=26]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:position")
@@ -66,7 +70,7 @@ tracks/0/keys = {
 "values": [ Vector2( 928, 48 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=27]
 resource_name = "idle"
 loop = true
 tracks/0/type = "value"
@@ -282,6 +286,9 @@ tracks/0/keys = {
 
 [node name="Tutorial" type="Node2D"]
 script = ExtResource( 8 )
+__meta__ = {
+"_edit_horizontal_guides_": [  ]
+}
 
 [node name="BackgroundLeft" type="TextureRect" parent="."]
 anchor_right = 0.5
@@ -294,6 +301,9 @@ mouse_default_cursor_shape = 2
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 7
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Ordner_Links_1" type="Node2D" parent="BackgroundLeft"]
 
@@ -352,6 +362,9 @@ mouse_default_cursor_shape = 2
 texture = ExtResource( 2 )
 expand = true
 stretch_mode = 7
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Ordner_Rechts_1" type="Node2D" parent="BackgroundRight"]
 
@@ -468,23 +481,30 @@ margin_right = 40.0
 script = ExtResource( 12 )
 
 [node name="Polygon2D" type="Polygon2D" parent="Textbox"]
+position = Vector2( -17.7778, -16.4923 )
+scale = Vector2( 1.22222, 1.06154 )
 color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( 8, 8, 80, 8, 80, 528, 8, 528 )
 
 [node name="Icon" type="Sprite" parent="Textbox/Polygon2D"]
-position = Vector2( 40, 64 )
+position = Vector2( 53.8182, 68.2899 )
 rotation = 1.5708
+scale = Vector2( 0.0942029, 0.0818182 )
 texture = ExtResource( 13 )
+flip_h = true
 
 [node name="Polygon2D2" type="Polygon2D" parent="Textbox"]
-position = Vector2( 872, 0 )
+position = Vector2( 870.222, -16.6154 )
+scale = Vector2( 1.22222, 1.07692 )
 color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( 8, 8, 80, 8, 80, 528, 8, 528 )
 
-[node name="Icon" type="Sprite" parent="Textbox/Polygon2D2"]
-position = Vector2( 48, 480 )
+[node name="Icon2" type="Sprite" parent="Textbox/Polygon2D2"]
+position = Vector2( 32.5455, 470.429 )
 rotation = -1.5708
+scale = Vector2( 0.0928571, 0.0818182 )
 texture = ExtResource( 13 )
+flip_h = true
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Textbox"]
 margin_left = 64.0
@@ -504,27 +524,31 @@ mouse_filter = 2
 
 [node name="Tween" type="Tween" parent="Textbox"]
 
-[node name="DialogPfeil" type="Sprite" parent="Textbox"]
+[node name="DialogPfeil" type="Polygon2D" parent="Textbox"]
 position = Vector2( 32, 504 )
 rotation = 1.5708
-scale = Vector2( 0.209479, 0.209479 )
-texture = ExtResource( 10 )
+scale = Vector2( 1.0625, 1 )
+color = Color( 0.996078, 0.945098, 0.737255, 1 )
+offset = Vector2( -135.529, -135 )
+polygon = PoolVector2Array( 128, 128, 144, 128, 136, 144 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Textbox/DialogPfeil"]
 autoplay = "idle"
-anims/RESET = SubResource( 4 )
-anims/idle = SubResource( 5 )
+anims/RESET = SubResource( 24 )
+anims/idle = SubResource( 25 )
 
-[node name="DialogPfeil2" type="Sprite" parent="Textbox"]
+[node name="DialogPfeil2" type="Polygon2D" parent="Textbox"]
 position = Vector2( 928, 48 )
 rotation = -1.5708
-scale = Vector2( 0.209479, 0.209479 )
-texture = ExtResource( 10 )
+scale = Vector2( 1.0625, 1 )
+color = Color( 0.996078, 0.945098, 0.737255, 1 )
+offset = Vector2( -135.904, -132.702 )
+polygon = PoolVector2Array( 128, 128, 144, 128, 136, 144 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Textbox/DialogPfeil2"]
 autoplay = "idle"
-anims/RESET = SubResource( 6 )
-anims/idle = SubResource( 7 )
+anims/RESET = SubResource( 26 )
+anims/idle = SubResource( 27 )
 
 [node name="TutBox" type="Area2D" parent="Textbox"]
 __meta__ = {
@@ -652,7 +676,44 @@ autoplay = "show"
 anims/RESET = SubResource( 22 )
 anims/show = SubResource( 23 )
 
+[node name="Textblub" type="AudioStreamPlayer2D" parent="Textbox"]
+stream = ExtResource( 16 )
+volume_db = -20.0
+
+[node name="BGM Tutorial" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 15 )
+volume_db = -20.0
+
+[node name="Click" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 14 )
+volume_db = -15.0
+
+[node name="Pause" type="Button" parent="."]
+margin_left = 470.0
+margin_top = 121.0
+margin_right = 559.0
+margin_bottom = 141.0
+rect_rotation = 90.0
+text = "Kaffe Pause!"
+
+[node name="Pause2" type="Button" parent="."]
+margin_left = 486.0
+margin_top = 383.0
+margin_right = 575.0
+margin_bottom = 403.0
+rect_rotation = -90.0
+text = "Kaffe Pause!"
+
+[node name="GUI" type="CanvasLayer" parent="."]
+
+[node name="Pausemenu" parent="GUI" instance=ExtResource( 17 )]
+
+[node name="TippEffekt" parent="." instance=ExtResource( 10 )]
+position = Vector2( 151, -127 )
+
 [connection signal="tween_completed" from="Textbox/Tween" to="Textbox" method="_on_Tween_tween_completed"]
 [connection signal="input_event" from="Textbox/TutBox" to="Textbox" method="_on_TutBox_input_event"]
 [connection signal="input_event" from="Textbox/Or1Box" to="Textbox" method="_on_Or1Box_input_event"]
 [connection signal="input_event" from="Textbox/Or2Box" to="Textbox" method="_on_Or2Box_input_event"]
+[connection signal="pressed" from="Pause" to="GUI/Pausemenu" method="_on_Pause_pressed"]
+[connection signal="pressed" from="Pause2" to="GUI/Pausemenu" method="_on_Pause_pressed"]

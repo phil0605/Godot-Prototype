@@ -21,9 +21,7 @@ func make_visible():
 
 func _on_MoveBox_input_event(_viewport, event, _shape_idx):
 	if event is InputEventScreenTouch:
-		print("touch")
 		if event.is_pressed():
-			print("pressed")
 			selected = true
 		
 	if selected:
