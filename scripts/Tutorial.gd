@@ -6,7 +6,6 @@ extends Node
 # var b = "text"
 var time
 var insta_password = "17051997"
-var congrat_message = ""
 var solved = false
 var tutend = false
 
@@ -25,8 +24,6 @@ func _input(event):
 func start_now():
 	time = 0
 	$ScoreTimer.start()
-	$CongratulationLabelLeft.visible = false
-	$CongratulationLabelRight.visible = false
 	
 func tutorial_end():
 	tutend = true
@@ -42,8 +39,6 @@ func _process(delta):
 		$TimeLabelLeft.text = str("%02d:%02d" % [minutes, seconds])
 		$TimeLabelRight.text = str("%02d:%02d" % [minutes, seconds])
 		
-		$CongratulationLabelLeft.text = congrat_message
-		$CongratulationLabelRight.text = congrat_message
 	
 		# nach dem erfolgreichen Lösen des Falls werden alle Objekte ausgeblendet
 		if(solved):
@@ -53,11 +48,11 @@ func _process(delta):
 			var right = $BackgroundRight.get_children()
 			for o in right:
 				o.visible = false
+			$GUI/Levelende.show_end(time)
 		
-		if (minutes == 20):
+		if (minutes >= 20):
 			solved = true
-			var lostGame = "Zeitüberschreitung! Der Fall wurde nicht gelöst."
-			setCongratMessage(lostGame)
+			$GUI/Levelende.show_end(time)
 	
 
 func getPassword():
@@ -71,8 +66,3 @@ func getTime():
 
 func stopTime():
 	solved = true
-	
-func setCongratMessage(new_congrat_message):
-	congrat_message = new_congrat_message
-	$CongratulationLabelLeft.show()
-	$CongratulationLabelRight.show()

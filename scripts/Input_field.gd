@@ -47,8 +47,6 @@ func _on_Button_enter_pressed():
 		if(solution == password):
 			var tab = $ColorRect.get_parent()
 			tab.visible = false
-			var message = "Glückwunsch! Der Fall wurde gelöst."
-			tutorial_node.setCongratMessage(message)
 			tutorial_node.stopTime()
 			
 		else:
