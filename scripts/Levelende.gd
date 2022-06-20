@@ -25,4 +25,5 @@ func show_end(time):
 func _on_QuitButton_pressed():
 	SceneTransition.change_scene("res://scenes/hauptmenu.tscn")
 	self.is_paused = false
+	#self.visible = false
 

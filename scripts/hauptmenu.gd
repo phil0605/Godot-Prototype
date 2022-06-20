@@ -37,3 +37,18 @@ func _on_BackButton_pressed():
 	$CenterContainer/Options.visible = false
 	$CenterContainer/Menu1.visible = true
 	$Menu_Swap.play()
+
+
+func _on_Master_value_changed(value):
+	AudioServer.set_bus_volume_db(0, value)
+
+
+func _on_Music_value_changed(value):
+	AudioServer.set_bus_volume_db(1, value)
+
+func _on_SFX_value_changed(value):
+	AudioServer.set_bus_volume_db(2, value)
+
+
+func _on_Fullscreen_toggled(button_pressed):
+	OS.window_fullscreen = button_pressed

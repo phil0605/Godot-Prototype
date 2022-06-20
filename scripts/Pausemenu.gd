@@ -34,3 +34,18 @@ func _on_ZurckButton_pressed():
 
 func _on_Pause_pressed():
 	self.is_paused = !is_paused
+	
+func _on_Master_value_changed(value):
+	AudioServer.set_bus_volume_db(0, value)
+
+
+func _on_Music_value_changed(value):
+	AudioServer.set_bus_volume_db(1, value)
+
+func _on_SFX_value_changed(value):
+	AudioServer.set_bus_volume_db(2, value)
+
+
+func _on_Fullscreen_toggled(button_pressed):
+	OS.window_fullscreen = button_pressed
+

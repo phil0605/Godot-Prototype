@@ -680,14 +680,17 @@ anims/show = SubResource( 23 )
 [node name="Textblub" type="AudioStreamPlayer2D" parent="Textbox"]
 stream = ExtResource( 16 )
 volume_db = -20.0
+bus = "SFX"
 
 [node name="BGM Tutorial" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 15 )
 volume_db = -20.0
+bus = "Music"
 
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 14 )
 volume_db = -15.0
+bus = "SFX"
 
 [node name="Pause" type="Button" parent="."]
 margin_left = 470.0
@@ -710,7 +713,6 @@ text = "Kaffee Pause!"
 [node name="Pausemenu" parent="GUI" instance=ExtResource( 17 )]
 
 [node name="Levelende" parent="GUI" instance=ExtResource( 18 )]
-visible = false
 
 [node name="TippEffekt" parent="." instance=ExtResource( 10 )]
 position = Vector2( 151, -127 )
