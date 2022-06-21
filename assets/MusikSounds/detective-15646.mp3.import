@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/detective-15646.mp3-72e6261f183fa5ed380300b2d0773f11.mp3str"
+
+[deps]
+
+source_file="res://assets/MusikSounds/detective-15646.mp3"
+dest_files=[ "res://.import/detective-15646.mp3-72e6261f183fa5ed380300b2d0773f11.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

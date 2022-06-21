@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 5
+emission_ring_radius = 13.0
+emission_ring_inner_radius = 12.0
+emission_ring_height = 1.0
+emission_ring_axis = Vector3( 0, 0, 1 )
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 1.0
+orbit_velocity_random = 1.0
+scale = 4.0
+color = Color( 0.411765, 0.411765, 0.411765, 0.576471 )
+
+[node name="TippEffekt" type="Particles2D"]
+emitting = false
+amount = 20
+lifetime = 0.2
+one_shot = true
+process_material = SubResource( 1 )

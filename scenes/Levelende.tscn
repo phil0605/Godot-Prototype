@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/Levelende.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Musik_Sounds/Menu_Swap.tscn" type="PackedScene" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 61
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.741176, 0.192157 )
+
+[node name="Levelende" type="ColorRect"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.913725 )
+script = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Menu1" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 254.0
+margin_top = 103.0
+margin_right = 705.0
+margin_bottom = 436.0
+
+[node name="Ergebnis" type="Label" parent="CenterContainer/Menu1"]
+margin_right = 451.0
+margin_bottom = 74.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.411765, 0.411765, 0.411765, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Kaffee Pause!"
+align = 1
+
+[node name="Text" type="Label" parent="CenterContainer/Menu1"]
+margin_top = 78.0
+margin_right = 451.0
+margin_bottom = 152.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.411765, 0.411765, 0.411765, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Kaffee Pause!"
+align = 1
+
+[node name="MINDESTABSTAND" type="Control" parent="CenterContainer/Menu1"]
+margin_top = 156.0
+margin_right = 451.0
+margin_bottom = 216.0
+rect_min_size = Vector2( 0, 60 )
+rect_pivot_offset = Vector2( -861, -116 )
+
+[node name="QuitButton" type="Button" parent="CenterContainer/Menu1"]
+pause_mode = 2
+margin_top = 220.0
+margin_right = 451.0
+margin_bottom = 269.0
+custom_fonts/font = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+text = "zum Menü"
+
+[node name="MINDESTABSTAND2" type="Control" parent="CenterContainer/Menu1"]
+margin_top = 273.0
+margin_right = 451.0
+margin_bottom = 333.0
+rect_min_size = Vector2( 0, 60 )
+
+[node name="Menu_Swap" parent="." instance=ExtResource( 3 )]
+position = Vector2( 29, 441 )
+
+[connection signal="pressed" from="CenterContainer/Menu1/QuitButton" to="." method="_on_QuitButton_pressed"]
