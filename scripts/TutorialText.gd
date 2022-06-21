@@ -197,18 +197,25 @@ func next_dialog5():
 	load_dialog6()
 
 func next_dialog6():
+	
+	Teil8 = false
+	Teil9 = false
 	Teil7 = true
 	page7 = 0
 	self.visible=true
 	load_dialog7()
 
 func next_dialog7():
+	Teil7 = false
+	Teil9 = false
 	Teil8 = true
 	page8 = 0
 	self.visible=true
 	load_dialog8()
 
 func next_dialog8():
+	Teil8 = false
+	Teil7 = false
 	Teil9 = true
 	page9 = 0
 	self.visible=true
