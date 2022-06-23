@@ -906,7 +906,7 @@ anims/wrong = SubResource( 40 )
 [connection signal="input_event" from="Textbox/Or1Box" to="Textbox" method="_on_Or1Box_input_event"]
 [connection signal="input_event" from="Textbox/Or2Box" to="Textbox" method="_on_Or2Box_input_event"]
 [connection signal="pressed" from="Pause" to="GUI/Pausemenu" method="_on_Pause_pressed"]
-[connection signal="pressed" from="Pause2" to="GUI/Pausemenu" method="_on_Pause_pressed"]
+[connection signal="pressed" from="Pause2" to="GUI/Pausemenu" method="_on_Pause2_pressed"]
 
 [editable path="BackgroundLeft/Ordner_Links_Rot/Ordner"]
 [editable path="BackgroundRight/Ordner_Rechts_Rot/Ordner"]

@@ -33,6 +33,7 @@ func _on_ZurckButton_pressed():
 
 
 func _on_Pause_pressed():
+	$CenterContainer.set_rotation(1.5708)
 	self.is_paused = !is_paused
 	
 func _on_Master_value_changed(value):
@@ -49,3 +50,8 @@ func _on_SFX_value_changed(value):
 func _on_Fullscreen_toggled(button_pressed):
 	OS.window_fullscreen = button_pressed
 
+
+
+func _on_Pause2_pressed():
+	$CenterContainer.set_rotation(-1.5708)
+	self.is_paused = !is_paused
