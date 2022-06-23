@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://assets/background.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/background Kopie.jpg" type="Texture" id=2]
@@ -329,6 +329,53 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id=35]
+resource_name = "wrong"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.713726, 0.0901961, 0.0901961, 0 ), Color( 0.713726, 0.0901961, 0.0901961, 0.32549 ), Color( 0.713726, 0.0901961, 0.0901961, 0 ) ]
+}
+
+[sub_resource type="Animation" id=38]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.713726, 0.0901961, 0.0901961, 0 ) ]
+}
+
+[sub_resource type="Animation" id=39]
+resource_name = "right"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.0901961, 0.713726, 0.0980392, 0 ), Color( 0.0901961, 0.713726, 0.0980392, 0.47451 ), Color( 0.0901961, 0.713726, 0.0980392, 0 ) ]
+}
+
+[sub_resource type="Animation" id=40]
 resource_name = "wrong"
 length = 0.75
 tracks/0/type = "value"
@@ -835,6 +882,20 @@ color = Color( 0.713726, 0.0901961, 0.0901961, 0 )
 [node name="Wrong_Red" type="AnimationPlayer" parent="Wrong"]
 anims/RESET = SubResource( 34 )
 anims/wrong = SubResource( 35 )
+
+[node name="Right" type="ColorRect" parent="."]
+anchor_bottom = 1.0
+margin_left = -24.0
+margin_top = -8.0
+margin_right = 992.0
+margin_bottom = 552.0
+mouse_filter = 2
+color = Color( 0.713726, 0.0901961, 0.0901961, 0 )
+
+[node name="Right_Green" type="AnimationPlayer" parent="Right"]
+anims/RESET = SubResource( 38 )
+anims/right = SubResource( 39 )
+anims/wrong = SubResource( 40 )
 
 [connection signal="body_entered" from="ColorRect/Area2D" to="BackgroundLeft/Ordner/Ordner_Links_1/Tab" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="ColorRect/Area2D" to="BackgroundLeft/Ordner/Ordner_Links_2/Tab" method="_on_Area2D_body_entered"]

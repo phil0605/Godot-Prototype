@@ -26,7 +26,7 @@ func start_now():
 	$ScoreTimer.start()
 	
 func tutorial_end():
-	tutend = true
+	tutend = !tutend
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if tutend == true:
@@ -42,13 +42,16 @@ func _process(delta):
 	
 		# nach dem erfolgreichen Lösen des Falls werden alle Objekte ausgeblendet
 		if(solved):
-			var left = $BackgroundLeft.get_children()
-			for o in left:
-				o.visible = false
-			var right = $BackgroundRight.get_children()
-			for o in right:
-				o.visible = false
-			$GUI/Levelende.show_end(time)
+			$Right/Right_Green.play("right")
+			tutorial_end()
+			$Textbox.next_dialog_end()
+			#var left = $BackgroundLeft.get_children()
+			#for o in left:
+			#	o.visible = false
+			#var right = $BackgroundRight.get_children()
+			#for o in right:
+			#	o.visible = false
+			#$GUI/Levelende.show_end(time)
 		
 		if (minutes >= 20):
 			solved = true
@@ -66,3 +69,17 @@ func getTime():
 
 func stopTime():
 	solved = true
+
+
+func _on_Test_pressed():
+	tutorial_end()
+
+func ScoreBoard():
+			
+			var left = $BackgroundLeft.get_children()
+			for o in left:
+				o.visible = false
+			var right = $BackgroundRight.get_children()
+			for o in right:
+				o.visible = false
+			$GUI/Levelende.show_end(time)

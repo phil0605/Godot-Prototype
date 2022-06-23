@@ -41,6 +41,11 @@ var dialog8 = ["Mist, schon wieder nicht richtig! Jetzt sind noch 2 Versuche üb
 var dialog9 = ["Okay das ist jetzt unser letzer Versuch, bevor wir 60 Sekunden verlieren.",
 				"Ich vermute ganz stark, dass das Passwort das vollständige Geburtsdatum des Täters ist!",
 				"Lasst jetzt bloß nicht den Kopf hängen!"]
+var dialog_end  = ["Gut gemacht!", 
+					"Hätte er ein stärkeres Passwort genommen, wäre das nicht so einfach gewesen!",
+					"Hier ist eure Belohnung!"]
+				
+
 
 var page1 = 0
 var page2 = 0
@@ -51,6 +56,7 @@ var page6 = 0
 var page7 = 0
 var page8 = 0
 var page9 = 0
+var page_end = 0
 
 var finished = false
 
@@ -63,6 +69,7 @@ var Teil6 = false
 var Teil7 = false
 var Teil8 = false
 var Teil9 = false
+var Teil_end = false
 
 onready var Or1L = get_node("../BackgroundLeft/Ordner/Ordner_Links_2/Ordner")
 onready var Or1R = get_node("../BackgroundRight/Ordner/Ordner_Rechts_2/Ordner")
@@ -74,6 +81,8 @@ onready var OrRotR = get_node("../BackgroundRight/Ordner_Rechts_Rot/Ordner")
 onready var IFR = get_node("../BackgroundRight/Ordner_Rechts_Rot/Tab")
 onready var IFL = get_node("../BackgroundLeft/Ordner_Links_Rot/Tab")
 onready var main = get_node("../")
+
+onready var Score = get_node ("../")
 
 
 #onready var area = get_node("../Area2D")
@@ -131,6 +140,8 @@ func _on_TutBox_input_event(viewport, event, shape_idx):
 			load_dialog8()
 		elif Teil9 == true:
 			load_dialog9()
+		elif Teil_end== true:
+			load_dialog_end()
 	if Input.is_action_just_pressed("press"):
 		if Teil1 == true:
 			load_dialog1()
@@ -220,6 +231,11 @@ func next_dialog8():
 	page9 = 0
 	self.visible=true
 	load_dialog9()
+	
+func next_dialog_end():
+	Teil_end = true
+	self.visible = true
+	load_dialog_end()
 	
 func load_dialog1():
 	if page1 < dialog1.size():
@@ -450,3 +466,27 @@ func load_dialog9():
 		self.visible = false
 		Teil9 = false
 
+func load_dialog_end():
+	if page_end < dialog_end.size():
+		if $RichTextLabel.percent_visible == 1:
+			finished = false
+			$Textblub.play()
+			$RichTextLabel.bbcode_text = dialog_end[page_end]
+			$RichTextLabel2.bbcode_text = dialog_end[page_end]
+			$RichTextLabel.percent_visible = 0
+			$RichTextLabel2.percent_visible = 0
+			$Tween.interpolate_property(
+				$RichTextLabel, "percent_visible", 0, 1, 1,
+				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+			)
+			$Tween.interpolate_property(
+				$RichTextLabel2, "percent_visible", 0, 1, 1,
+				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+			)
+			$Tween.start()
+			page_end += 1
+			
+	elif $RichTextLabel.percent_visible == 1 and page_end >= dialog_end.size():
+		self.visible = false
+		Teil_end = false
+		Score.ScoreBoard()
