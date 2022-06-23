@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/text-sound-4-30218.mp3-afcc1ca14f15c07fe3c60f9130fdffb0.mp3str"
+
+[deps]
+
+source_file="res://assets/MusikSounds/text-sound-4-30218.mp3"
+dest_files=[ "res://.import/text-sound-4-30218.mp3-afcc1ca14f15c07fe3c60f9130fdffb0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
