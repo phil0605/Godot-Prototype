@@ -8,11 +8,10 @@ func _ready():
 
 
 func _on_Level1Button_pressed():
-	pass # Replace with function body.
+	SceneTransition.change_scene("res://scenes/Fall1.tscn")
 
 
 func _on_TutorialButton_pressed():
-	#$Tutorial._ready()
 	SceneTransition.change_scene("res://scenes/Tutorial.tscn")
 
 

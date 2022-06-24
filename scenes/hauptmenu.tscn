@@ -187,9 +187,9 @@ margin_right = 1560.0
 margin_bottom = 541.0
 
 [node name="Menu1" type="VBoxContainer" parent="CenterContainer"]
-margin_left = 4.0
+margin_left = 5.0
 margin_top = 90.0
-margin_right = 594.0
+margin_right = 595.0
 margin_bottom = 451.0
 
 [node name="Text" type="Label" parent="CenterContainer/Menu1"]
@@ -375,9 +375,8 @@ text = "Zurück"
 
 [node name="Faelle" type="VBoxContainer" parent="CenterContainer"]
 visible = false
-margin_left = -1.0
 margin_top = 90.0
-margin_right = 599.0
+margin_right = 600.0
 margin_bottom = 451.0
 
 [node name="Text" type="Label" parent="CenterContainer/Faelle"]
