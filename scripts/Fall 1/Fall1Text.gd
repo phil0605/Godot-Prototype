@@ -11,8 +11,9 @@ var dialog3 = ["Mist, schon wieder nicht richtig! Jetzt sind noch 2 Versuche üb
 				"Ich glaube ich habe eine Idee, beim nächsten Mal gebe ich euch ein Tipp!"]
 				
 var dialog4 = ["Okay das ist jetzt unser letzer Versuch, bevor wir 60 Sekunden verlieren.",
-				"Ich vermute ganz stark, dass das Passwort das vollständige Geburtsdatum des Täters ist!",
+				"Ich glaube wir sollten eines dieser häufigen Passwörter aus dem Nachrichtenartikel versuchen!",
 				"Lasst jetzt bloß nicht den Kopf hängen!"]
+var dialog_gelb_end = ["Sehr gut! Hätte er mal ein selteneres Passwort genommen. Aber wenn er eines der Häufigsten nimmt, macht es das für uns leichter."]
 var dialog_end  = ["Gut gemacht!", 
 					"Hätte er ein stärkeres Passwort genommen, wäre das nicht so einfach gewesen!",
 					"Hier ist eure Belohnung!"]
@@ -23,6 +24,7 @@ var page1 = 0
 var page2 = 0
 var page3 = 0
 var page4 = 0
+var page_gelb_end = 0
 var page_end = 0
 
 var finished = false
@@ -31,6 +33,7 @@ var Teil1 = true
 var Teil2 = false
 var Teil3 = false
 var Teil4 = false
+var Teil_gelb_end = false
 var Teil_end = false
 
 onready var main = get_node("../")
@@ -42,6 +45,9 @@ onready var Or2L = get_node("../BackgroundLeft/Ordner/Ordner_Links_1/Ordner")
 onready var Or2R = get_node("../BackgroundRight/Ordner/Ordner_Rechts_1/Ordner")
 onready var OrGelbL = get_node("../BackgroundLeft/Ordner_Links_Gelb/Ordner")
 onready var OrGelbR = get_node("../BackgroundRight/Ordner_Rechts_Gelb/Ordner")
+
+onready var IFR = get_node("../BackgroundRight/Ordner_Rechts_Gelb/Tab")
+onready var IFL = get_node("../BackgroundLeft/Ordner_Links_Gelb/Tab")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -65,6 +71,8 @@ func _on_TutBox_input_event(viewport, event, shape_idx):
 			load_dialog3()
 		elif Teil4 == true:
 			load_dialog4()
+		elif Teil_gelb_end == true:
+			load_dialog_gelb_end()
 		elif Teil_end== true:
 			load_dialog_end()
 	if Input.is_action_just_pressed("press"):
@@ -102,6 +110,11 @@ func next_dialog3():
 	page4 = 0
 	self.visible=true
 	load_dialog4()
+
+func next_dialog_gelb_end():
+	Teil_gelb_end = true
+	self.visible = true
+	load_dialog_gelb_end()
 	
 func next_dialog_end():
 	Teil_end = true
@@ -135,6 +148,8 @@ func load_dialog1():
 		Or1R.visible = true
 		Or2R.visible = true
 		OrGelbR.visible = true
+		IFR.tutorial_end()
+		IFL.tutorial_end()
 		main.start_now()
 		main.tutorial_end()
 		self.visible = false
@@ -211,6 +226,30 @@ func load_dialog4():
 	elif $RichTextLabel.percent_visible == 1 and page4 >= dialog4.size():
 		self.visible = false
 		Teil4 = false
+		
+func load_dialog_gelb_end():
+	if page_gelb_end < dialog_gelb_end.size():
+		if $RichTextLabel.percent_visible == 1:
+			finished = false
+			$Textblub.play()
+			$RichTextLabel.bbcode_text = dialog_gelb_end[page_gelb_end]
+			$RichTextLabel2.bbcode_text = dialog_gelb_end[page_gelb_end]
+			$RichTextLabel.percent_visible = 0
+			$RichTextLabel2.percent_visible = 0
+			$Tween.interpolate_property(
+				$RichTextLabel, "percent_visible", 0, 1, 1,
+				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+			)
+			$Tween.interpolate_property(
+				$RichTextLabel2, "percent_visible", 0, 1, 1,
+				Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
+			)
+			$Tween.start()
+			page4 += 1
+			
+	elif $RichTextLabel.percent_visible == 1 and page_gelb_end >= dialog_gelb_end.size():
+		self.visible = false
+		Teil_gelb_end = false
 
 func load_dialog_end():
 	if page_end < dialog_end.size():

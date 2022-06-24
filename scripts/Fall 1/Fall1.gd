@@ -16,7 +16,7 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	$"BGM Tutorial".play()
 	rng.randomize()
-	var rand = int(rng.randf_range(0, 2))
+	var rand = rng.randi_range(0, 2)
 	password = rand_password[rand]
 	print(password)
 
@@ -63,6 +63,10 @@ func _process(delta):
 			solved = true
 			$GUI/Levelende.show_end(time)
 	
+func next_phase():
+	$Textbox.next_dialog_gelb_end()
+	$BackgroundLeft/Ordner_Links_Rot/Ordner.visible = true
+	$BackgroundRight/Ordner_Rechts_Rot/Ordner.visible = true
 
 func getPassword():
 	return password

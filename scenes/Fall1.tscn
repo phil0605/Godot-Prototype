@@ -1,10 +1,11 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://assets/background.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/background Kopie.jpg" type="Texture" id=2]
 [ext_resource path="res://scenes/Ordner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Input_field.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Ordner_rot.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scripts/Fall 1/Input_field_Fall1_gelb.gd" type="Script" id=6]
 [ext_resource path="res://scenes/Tab_Instagram.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scripts/Fall 1/Fall1.gd" type="Script" id=8]
 [ext_resource path="res://scenes/WikiEintrag.tscn" type="PackedScene" id=9]
@@ -252,6 +253,7 @@ visible = false
 position = Vector2( 432, 8 )
 rotation = 1.5708
 scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 6 )
 
 [node name="Ordner_Links_Rot" type="Node2D" parent="BackgroundLeft"]
 
@@ -335,6 +337,7 @@ visible = false
 position = Vector2( 48, 528 )
 rotation = 4.71239
 scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 6 )
 
 [node name="Ordner_Rechts_Rot" type="Node2D" parent="BackgroundRight"]
 rotation = 4.71239
