@@ -52,3 +52,9 @@ func _on_SFX_value_changed(value):
 
 func _on_Fullscreen_toggled(button_pressed):
 	OS.window_fullscreen = button_pressed
+
+
+func _on_Area2D_input_event(viewport, event, shape_idx):
+	if event is InputEventScreenTouch:
+		$AnimationPlayer.play("menu_start")
+		$Area2D.visible = false
