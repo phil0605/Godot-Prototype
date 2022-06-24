@@ -42,13 +42,13 @@ func _on_Button_entf_pressed():
 func _on_Button_enter_pressed():
 	if tutend == true:
 		var tutorial_node = get_parent().get_parent().get_parent()
-		var solution = tutorial_node.getPassword_gelb()
+		var solution = tutorial_node.getPassword_rot()
 		var time = tutorial_node.getTime()
 	
 		if(solution == password):
 			var tab = $ColorRect.get_parent()
 			tab.visible = false
-			tutorial_node.next_phase()
+			tutorial_node.stopTime()
 			
 		else:
 			wrong.play("wrong")
@@ -62,7 +62,7 @@ func _on_Button_enter_pressed():
 				Textbox.next_dialog3()
 			
 			if(trials == 1):
-				Textbox.next_dialog4()
+				Textbox.next_dialog5()
 				#$Trials.add_text("Die Lösung versteckt sich in einem Instagrampost, der sein Geburtsdatum als Passwort benutzt.")
 			
 			if(trials == 0):

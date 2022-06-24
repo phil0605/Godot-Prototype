@@ -8,7 +8,8 @@ var time
 var rand_password = ["123456", "654321", "000000"]
 var solved = false
 var tutend = false
-var password
+var password_gelb
+var password_rot = "1705"
 var rng = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
@@ -17,8 +18,8 @@ func _ready():
 	$"BGM Tutorial".play()
 	rng.randomize()
 	var rand = rng.randi_range(0, 2)
-	password = rand_password[rand]
-	print(password)
+	password_gelb = rand_password[rand]
+	print(password_gelb)
 
 func _input(event):
 	if event is InputEventScreenTouch:
@@ -67,9 +68,16 @@ func next_phase():
 	$Textbox.next_dialog_gelb_end()
 	$BackgroundLeft/Ordner_Links_Rot/Ordner.visible = true
 	$BackgroundRight/Ordner_Rechts_Rot/Ordner.visible = true
+	$BackgroundLeft/Ordner/Ordner_Links_3/Ordner.visible = true
+	$BackgroundLeft/Ordner/Ordner_Links_4/Ordner.visible = true
+	$BackgroundRight/Ordner/Ordner_Rechts_3/Ordner.visible = true
+	$BackgroundRight/Ordner/Ordner_Rechts_4/Ordner.visible = true
 
-func getPassword():
-	return password
+func getPassword_gelb():
+	return password_gelb
+
+func getPassword_rot():
+	return password_rot
 	
 func setTime(new_time):
 	time = new_time
