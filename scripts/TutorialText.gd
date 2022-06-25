@@ -32,15 +32,15 @@ var dialog6 = ["Das ist ein Eingabefeld. In dieses müsst ihr ein Passwort einge
 				"Das war alles, was ich euch beibringen kann, ab jetzt seid ihr auf euch alleine gestellt.",
 				"Viel Erfolg! Die Zeit startet jetzt."]
 				
-var dialog7 = ["Schade, das war leider falsch! Aber kein Problem, wir haben noch 3 Versuche.",
+var dialog7 = ["Schade, das war leider falsch! Aber kein Problem, wir haben noch 2 Versuche.",
 				"Gebt jetzt nicht auf und macht weiter!"]
 				
-var dialog8 = ["Mist, schon wieder nicht richtig! Jetzt sind noch 2 Versuche übrig.",
-				"Ich glaube ich habe eine Idee, beim nächsten Mal gebe ich euch ein Tipp!"]
+var dialog8 = ["Mist, schon wieder nicht richtig! Jetzt ist nur noch 1 Versuch übrig, bevor wir 60 Sekunden verlieren.",
+				"Ich glaube ich habe eine Idee! Beim nächsten Mal verrate ich sie euch."]
 				
-var dialog9 = ["Okay das ist jetzt unser letzer Versuch, bevor wir 60 Sekunden verlieren.",
+var dialog9 = ["Okay, jetzt haben wir eine Minute Strafe bekommen, aber das macht nichts.",
 				"Ich vermute ganz stark, dass das Passwort das vollständige Geburtsdatum des Täters ist!",
-				"Lasst jetzt bloß nicht den Kopf hängen!"]
+				"Wir können es immer noch schaffen!"]
 var dialog_end  = ["Gut gemacht!", 
 					"Hätte er ein stärkeres Passwort genommen, wäre das nicht so einfach gewesen!",
 					"Hier ist eure Belohnung!"]

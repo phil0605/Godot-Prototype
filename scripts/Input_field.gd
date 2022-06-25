@@ -61,19 +61,13 @@ func _on_Button_enter_pressed():
 			
 			if(trials == 2):
 				Textbox.next_dialog7()
+				#$Trials.add_text("Die Lösung versteckt sich in einem Instagrampost, der sein Geburtsdatum als Passwort benutzt.")
 			
 			if(trials == 1):
 				Textbox.next_dialog8()
-				#$Trials.add_text("Die Lösung versteckt sich in einem Instagrampost, der sein Geburtsdatum als Passwort benutzt.")
-			
-			if(trials == 0):
-				#password = solution
 				time += 50
 				tutorial_node.setTime(time)
-				#$Trials.clear()
-			
-				#$Trials.add_text("Da keine Versuche mehr übrig sind, gibt es eine Minute Strafe. Deine Versuche werden zurückgesetzt.")
-				trials = 3
+				trials = 4
 				
 			trials -= 1
 

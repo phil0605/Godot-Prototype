@@ -2,19 +2,19 @@ extends Control
 
 #Einführung
 var dialog1 = ["Willkommen zurück!", 
-			   "Du weißt, was zu tun ist.", 
-			   "Du hast 15 Minuten Zeit. Los gehts!"]
-var dialog2 = ["Schade, das war leider falsch! Aber kein Problem, wir haben noch 3 Versuche.",
+			   "Diesmal hast du 15 Minuten Zeit.", 
+			   "Ich habe das Gefühl, die Cäsar-Verschlüsselung wird uns hier weiterhelfen. Viel Erfolg! Los gehts!"]
+var dialog2 = ["Schade, das war leider falsch! Aber kein Problem, wir haben noch 2 Versuche.",
 				"Gebt jetzt nicht auf und macht weiter!"]
 				
-var dialog3 = ["Mist, schon wieder nicht richtig! Jetzt sind noch 2 Versuche übrig.",
-				"Ich glaube ich habe eine Idee, beim nächsten Mal gebe ich euch ein Tipp!"]
+var dialog3 = ["Mist, schon wieder nicht richtig! Jetzt ist nur noch 1 Versuch übrig, bevor wir 60 Sekunden verlieren.",
+				"Ich glaube ich habe eine Idee, beim nächsten Mal gebe ich euch einen Tipp!"]
 				
-var dialog4 = ["Okay das ist jetzt unser letzer Versuch, bevor wir 60 Sekunden verlieren.",
+var dialog4 = ["Okay, jetzt haben wir eine Minute Strafe bekommen, aber das macht nichts.",
 				"Ich glaube wir sollten eines dieser häufigen Passwörter aus dem Nachrichtenartikel versuchen!",
 				"Lasst jetzt bloß nicht den Kopf hängen!"]
 				
-var dialog5 = ["Okay das ist jetzt unser letzer Versuch, bevor wir 60 Sekunden verlieren.",
+var dialog5 = ["Okay, jetzt haben wir eine Minute Strafe bekommen, aber das macht nichts.",
 				"Ich glaube wir sollten nach einer Zahl suchen und sie mithilfe der Cäsar-Verschlüsselung entschlüsseln.",
 				 "Der Key, also der Schlüssel, muss hier auch irgendwo stehen.",
 				"Lasst jetzt bloß nicht den Kopf hängen!"]

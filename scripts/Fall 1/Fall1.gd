@@ -52,19 +52,14 @@ func _process(delta):
 			$Right/Right_Green.play("right")
 			tutorial_end()
 			$Textbox.next_dialog_end()
-			#var left = $BackgroundLeft.get_children()
-			#for o in left:
-			#	o.visible = false
-			#var right = $BackgroundRight.get_children()
-			#for o in right:
-			#	o.visible = false
-			#$GUI/Levelende.show_end(time)
+			
 		
-		if (minutes >= 20):
+		if (minutes >= 15):
 			solved = true
 			$GUI/Levelende.show_end(time)
 	
 func next_phase():
+	$Right/Right_Green.play("right")
 	$Textbox.next_dialog_gelb_end()
 	$BackgroundLeft/Ordner_Links_Rot/Ordner.visible = true
 	$BackgroundRight/Ordner_Rechts_Rot/Ordner.visible = true
