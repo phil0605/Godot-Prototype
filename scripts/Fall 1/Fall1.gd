@@ -5,7 +5,7 @@ extends Node
 # var a = 2
 # var b = "text"
 var time
-var rand_password = ["123456", "654321", "000000"]
+var rand_password = ["123456", "111111", "000000", "123123"]
 var solved = false
 var tutend = false
 var password_gelb
@@ -17,7 +17,7 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	$"BGM Tutorial".play()
 	rng.randomize()
-	var rand = rng.randi_range(0, 2)
+	var rand = rng.randi_range(0, 3)
 	password_gelb = rand_password[rand]
 	print(password_gelb)
 
