@@ -2,8 +2,9 @@ extends Control
 
 #Einführung
 var dialog1 = ["Willkommen zurück!", 
-			   "Diesmal hast du 15 Minuten Zeit.", 
-			   "Ich habe das Gefühl, die Cäsar-Verschlüsselung wird uns hier weiterhelfen. Viel Erfolg! Los gehts!"]
+			   "Diesmal habt ihr 15 Minuten Zeit.", 
+			   "Ich habe das Gefühl, die Cäsar-Verschlüsselung wird uns hier weiterhelfen.", 
+			   "Viel Erfolg! Los gehts!"]
 var dialog2 = ["Schade, das war leider falsch! Aber kein Problem, wir haben noch 2 Versuche.",
 				"Gebt jetzt nicht auf und macht weiter!"]
 				
@@ -17,12 +18,12 @@ var dialog4 = ["Okay, jetzt haben wir eine Minute Strafe bekommen, aber das mach
 var dialog5 = ["Okay, jetzt haben wir eine Minute Strafe bekommen, aber das macht nichts.",
 				"Ich glaube wir sollten nach einer Zahl suchen und sie mithilfe der Cäsar-Verschlüsselung entschlüsseln.",
 				 "Der Key, also der Schlüssel, muss hier auch irgendwo stehen.",
-				"Lasst jetzt bloß nicht den Kopf hängen!"]
+				"Ave Römer!"]
 				
 var dialog_gelb_end = ["Sehr gut! Hätte er mal ein individuelles Passwort genommen. Aber so macht es das für uns leichter."]
 var dialog_end  = ["Gut gemacht!", 
 					"Schon merkwürdig, dass das Ergebnis der Cäsar-Verschlüsselung wieder sein Geburtstag ist!",
-					"Aber egal. Hier ist eure Belohnung!"]
+					"Uns soll es recht sein. Hier ist eure Belohnung!"]
 				
 
 

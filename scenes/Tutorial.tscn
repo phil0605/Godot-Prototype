@@ -12,13 +12,13 @@
 [ext_resource path="res://scenes/TippEffekt.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Pfeil.png" type="Texture" id=11]
 [ext_resource path="res://scripts/TutorialText.gd" type="Script" id=12]
-[ext_resource path="res://assets/auftraggeber.png" type="Texture" id=13]
 [ext_resource path="res://assets/MusikSounds/rclick-13693.mp3" type="AudioStream" id=14]
 [ext_resource path="res://assets/MusikSounds/detective-15646.mp3" type="AudioStream" id=15]
 [ext_resource path="res://assets/MusikSounds/text-sound-4-30218.mp3" type="AudioStream" id=16]
 [ext_resource path="res://scenes/Pausemenu.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/Levelende.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/flash.tres" type="Shader" id=19]
+[ext_resource path="res://assets/tips colleague.png" type="Texture" id=20]
 
 [sub_resource type="ShaderMaterial" id=36]
 resource_local_to_scene = true
@@ -603,11 +603,10 @@ color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( 8, 8, 80, 8, 80, 528, 8, 528 )
 
 [node name="Icon" type="Sprite" parent="Textbox/Polygon2D"]
-position = Vector2( 53.8182, 68.2899 )
+position = Vector2( 62, 42 )
 rotation = 1.5708
-scale = Vector2( 0.0942029, 0.0818182 )
-texture = ExtResource( 13 )
-flip_h = true
+scale = Vector2( 0.025, 0.025 )
+texture = ExtResource( 20 )
 
 [node name="Polygon2D2" type="Polygon2D" parent="Textbox"]
 position = Vector2( 870.222, -16.6154 )
@@ -616,11 +615,10 @@ color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( 8, 8, 80, 8, 80, 528, 8, 528 )
 
 [node name="Icon2" type="Sprite" parent="Textbox/Polygon2D2"]
-position = Vector2( 32.5455, 470.429 )
+position = Vector2( 25, 494 )
 rotation = -1.5708
-scale = Vector2( 0.0928571, 0.0818182 )
-texture = ExtResource( 13 )
-flip_h = true
+scale = Vector2( 0.025, 0.025 )
+texture = ExtResource( 20 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Textbox"]
 margin_left = 64.0
