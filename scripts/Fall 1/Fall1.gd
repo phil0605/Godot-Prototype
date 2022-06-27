@@ -61,12 +61,6 @@ func _process(delta):
 func next_phase():
 	$Right/Right_Green.play("right")
 	$Textbox.next_dialog_gelb_end()
-	$BackgroundLeft/Ordner_Links_Rot/Ordner.visible = true
-	$BackgroundRight/Ordner_Rechts_Rot/Ordner.visible = true
-	$BackgroundLeft/Ordner/Ordner_Links_3/Ordner.visible = true
-	$BackgroundLeft/Ordner/Ordner_Links_4/Ordner.visible = true
-	$BackgroundRight/Ordner/Ordner_Rechts_3/Ordner.visible = true
-	$BackgroundRight/Ordner/Ordner_Rechts_4/Ordner.visible = true
 
 func getPassword_gelb():
 	return password_gelb

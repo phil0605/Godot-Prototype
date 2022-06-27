@@ -1,19 +1,19 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://assets/ArtikelKryptografie.png" type="Texture" id=1]
+[ext_resource path="res://assets/Zahlenstrahl1.png" type="Texture" id=1]
 [ext_resource path="res://scripts/Tab_Script.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 904.167, 1319.92 )
+extents = Vector2( 4165.32, 1036.29 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 133.203, 96.8749 )
+extents = Vector2( 294.354, 173.387 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 118.5, 169.5 )
+extents = Vector2( 533.5, 148 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 96, 144 )
+extents = Vector2( 516, 128 )
 
 [node name="Tab_Instagram" type="Node2D"]
 script = ExtResource( 2 )
@@ -27,7 +27,8 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.317949, 0.317949 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstaPost/MoveBox"]
-position = Vector2( 1.53979e-05, 4.0366 )
+position = Vector2( 4.03176, 4.03238 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 1 )
 
 [node name="CloseBox" type="Area2D" parent="InstaPost"]
@@ -35,19 +36,21 @@ scale = Vector2( 0.317949, 0.317949 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InstaPost/CloseBox"]
 modulate = Color( 0.239216, 0.113725, 0.847059, 1 )
-position = Vector2( 827.474, -1267.45 )
+position = Vector2( 3883.06, -866.934 )
+scale = Vector2( 1, 1 )
 shape = SubResource( 2 )
 
 [node name="Body" type="KinematicBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Body"]
 modulate = Color( 0.843137, 0.109804, 0.109804, 1 )
-position = Vector2( 0.5, 0.5 )
+position = Vector2( 0.5, 1 )
 shape = SubResource( 3 )
 
 [node name="reset" type="KinematicBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="reset"]
+position = Vector2( -1, 0 )
 shape = SubResource( 4 )
 
 [connection signal="input_event" from="InstaPost/MoveBox" to="." method="_on_MoveBox_input_event"]
