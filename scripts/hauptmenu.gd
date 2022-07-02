@@ -12,7 +12,7 @@ func _on_Level1Button_pressed():
 
 
 func _on_TutorialButton_pressed():
-	SceneTransition.change_scene("res://scenes/Tutorial.tscn")
+	SceneTransition.change_scene("res://scenes/Comic1.tscn")
 
 
 func _on_QuitButton_pressed():
