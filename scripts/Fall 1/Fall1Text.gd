@@ -53,13 +53,19 @@ onready var Or1R = get_node("../BackgroundRight/Ordner/Ordner_Rechts_2/Ordner")
 onready var Or2L = get_node("../BackgroundLeft/Ordner/Ordner_Links_1/Ordner")
 onready var Or2R = get_node("../BackgroundRight/Ordner/Ordner_Rechts_1/Ordner")
 onready var OrGelbL = get_node("../BackgroundLeft/Ordner_Links_Gelb/Ordner")
-onready var OrGelbR = get_node("../BackgroundRight/Ordner_Rechts_Gelb/Ordner")
+onready var Or5R = get_node("../BackgroundRight/Ordner/Ordner_Rechts_5/Ordner")
+onready var Or3L = get_node("../BackgroundLeft/Ordner/Ordner_Links_3/Ordner")
+onready var Or3R = get_node("../BackgroundRight/Ordner/Ordner_Rechts_3/Ordner")
+onready var Or4L = get_node("../BackgroundLeft/Ordner/Ordner_Links_4/Ordner")
+onready var Or4R = get_node("../BackgroundRight/Ordner/Ordner_Rechts_4/Ordner")
+onready var Or5L = get_node("../BackgroundLeft/Ordner/Ordner_Links_5/Ordner")
+onready var OrRotR = get_node("../BackgroundRight/Ordner_Rechts_Rot/Ordner")
 
-onready var IGR = get_node("../BackgroundRight/Ordner_Rechts_Gelb/Tab")
+
 onready var IGL = get_node("../BackgroundLeft/Ordner_Links_Gelb/Tab")
 
 onready var IRR = get_node("../BackgroundRight/Ordner_Rechts_Rot/Tab")
-onready var IRL = get_node("../BackgroundLeft/Ordner_Links_Rot/Tab")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -174,8 +180,7 @@ func load_dialog1():
 		OrGelbL.visible = true
 		Or1R.visible = true
 		Or2R.visible = true
-		OrGelbR.visible = true
-		IGR.tutorial_end()
+		Or5R.visible = true
 		IGL.tutorial_end()
 		main.start_now()
 		main.tutorial_end()
@@ -299,8 +304,13 @@ func load_dialog_gelb_end():
 			page_gelb_end += 1
 			
 	elif $RichTextLabel.percent_visible == 1 and page_gelb_end >= dialog_gelb_end.size():
-		IRL.tutorial_end()
 		IRR.tutorial_end()
+		Or3L.visible = true
+		Or3R.visible = true
+		Or4L.visible = true
+		Or4R.visible = true
+		Or5L.visible = true
+		OrRotR.visible = true
 		self.visible = false
 		Teil_gelb_end = false
 
