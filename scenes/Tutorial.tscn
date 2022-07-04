@@ -417,7 +417,7 @@ rotation = 1.5708
 
 [node name="Tab" parent="BackgroundLeft/Ordner/Ordner_Links_1" instance=ExtResource( 7 )]
 visible = false
-position = Vector2( 231, 322 )
+position = Vector2( 231, 301 )
 rotation = 1.5708
 
 [node name="Ordner_Links_2" type="Node2D" parent="BackgroundLeft/Ordner"]
@@ -429,7 +429,7 @@ rotation = 1.5708
 
 [node name="Tab" parent="BackgroundLeft/Ordner/Ordner_Links_2" instance=ExtResource( 9 )]
 visible = false
-position = Vector2( 179, 217 )
+position = Vector2( 205, 201 )
 rotation = 1.5708
 scale = Vector2( 0.8, 0.8 )
 
@@ -487,7 +487,7 @@ rotation = 4.71239
 
 [node name="Tab" parent="BackgroundRight/Ordner/Ordner_Rechts_1" instance=ExtResource( 6 )]
 visible = false
-position = Vector2( 250, 322 )
+position = Vector2( 225, 301 )
 rotation = -1.5708
 scale = Vector2( 0.4, 0.4 )
 
@@ -500,7 +500,7 @@ rotation = 4.71239
 
 [node name="Tab" parent="BackgroundRight/Ordner/Ordner_Rechts_2" instance=ExtResource( 9 )]
 visible = false
-position = Vector2( 293, 219 )
+position = Vector2( 265, 201 )
 rotation = -1.5708
 scale = Vector2( 0.8, 0.8 )
 
@@ -518,7 +518,7 @@ material = SubResource( 37 )
 
 [node name="Tab" parent="BackgroundRight/Ordner_Rechts_Rot" instance=ExtResource( 4 )]
 visible = false
-position = Vector2( -528, 48.0005 )
+position = Vector2( -250, 60 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="ColorRect" type="ColorRect" parent="BackgroundRight"]
