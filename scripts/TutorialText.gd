@@ -2,8 +2,8 @@ extends Control
 
 #Einführung
 var dialog1 = ["Willkommen ihr Daten Detektive! (tippe)", 
-			   "Das hier ist dein erster Fall oder?", 
-			   "Gut, dann zeig ich dir mal ein paar Grundlagen!"]
+			   "Das hier ist euer erster Fall oder?", 
+			   "Gut, dann zeig ich euch mal ein paar Grundlagen!"]
 
 #Erklärung Timer und Score
 var dialog2 = ["Das da oben ist ein Timer.", 
@@ -14,33 +14,33 @@ var dialog2 = ["Das da oben ist ein Timer.",
 				"Gehen wir zum nächsten Punkt über."]
 
 #Übergang Ordner1
-var dialog3 = ["Tippe auf diesen Ordner!"]
+var dialog3 = ["Tippt auf diesen Ordner!"]
 
 #Erklärung Tabs
-var dialog4 = ["In jedem Ordner versteckt sich ein Fenster, dass du beliebig bewegen, wieder schließen und öffnen kannst!",
-				 "Aber das Wichtigste ist, dass du aus ihnen Informationen herausziehen kannst."]
+var dialog4 = ["In jedem Ordner versteckt sich ein Fenster, dass ihr beliebig bewegen, wieder schließen und öffnen könnt!",
+				 "Aber das Wichtigste ist, dass ihr aus ihnen Informationen herausziehen könnt."]
 
 #Übergang Ordner Rot
-var dialog5 = [ "Dies hier ist die zweite Art von Ordner. Tippe diesen doch auch mal an!"]
+var dialog5 = [ "Dies hier ist die zweite Art von Ordner. Tippt diesen doch auch mal an!"]
 
 #Erklärung Passwort, Versuche/Hilfe und Start für Fall
 var dialog6 = ["Das ist ein Eingabefeld. In dieses müsst ihr ein Passwort eingeben, um weiter zu kommen oder einen Fall zu lösen.",
 				"Der rote Ordner ist immer der letzte Ordner eines jeden Levels.",
 				"Doch Achtung! Für jeden Fehlversuch gibt es eine Zeitstrafe von 10 Sekunden.",
-				"Nach drei gescheiterten Versuchen ist es sogar eine Starfminute. Seid also wachsam.",
+				"Nach drei gescheiterten Versuchen ist es sogar eine Strafminute. Seid also wachsam.",
 				"Solange die Zeit noch nicht abgelaufen ist, habt ihr so viele Versuche wie ihr wollt.",
-				"Das war alles, was ich euch beibringen kann, ab jetzt seid ihr auf euch alleine gestellt.",
+				"Das war alles, was ich euch beibringen kann, ab jetzt seid ihr auf euch allein gestellt.",
 				"Viel Erfolg! Die Zeit startet jetzt."]
 				
-var dialog7 = ["Schade, das war leider falsch! Aber kein Problem, wir haben noch 3 Versuche.",
+var dialog7 = ["Schade, das war leider falsch! Aber kein Problem, wir haben noch 2 Versuche.",
 				"Gebt jetzt nicht auf und macht weiter!"]
 				
-var dialog8 = ["Mist, schon wieder nicht richtig! Jetzt sind noch 2 Versuche übrig.",
-				"Ich glaube ich habe eine Idee, beim nächsten Mal gebe ich euch ein Tipp!"]
+var dialog8 = ["Mist, schon wieder nicht richtig! Jetzt ist nur noch 1 Versuch übrig, bevor wir 60 Sekunden verlieren.",
+				"Ich glaube ich habe eine Idee! Beim nächsten Mal verrate ich sie euch."]
 				
-var dialog9 = ["Okay das ist jetzt unser letzer Versuch, bevor wir 60 Sekunden verlieren.",
+var dialog9 = ["Okay, jetzt haben wir eine Minute Strafe bekommen, aber das macht nichts.",
 				"Ich vermute ganz stark, dass das Passwort das vollständige Geburtsdatum des Täters ist!",
-				"Lasst jetzt bloß nicht den Kopf hängen!"]
+				"Wir können es immer noch schaffen!"]
 var dialog_end  = ["Gut gemacht!", 
 					"Hätte er ein stärkeres Passwort genommen, wäre das nicht so einfach gewesen!",
 					"Hier ist eure Belohnung!"]

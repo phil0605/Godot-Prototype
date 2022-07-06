@@ -22,7 +22,7 @@ func _process(delta):
 		var tutorial_node = get_parent().get_parent().get_parent()
 		var time = tutorial_node.getTime()
 		var minutes:int   = int(time / 60.0) % 60
-		if (minutes >= 20.0):
+		if (minutes >= 15.0):
 			var tab = $ColorRect.get_parent()
 			tab.visible = false
 
@@ -42,9 +42,8 @@ func _on_Button_entf_pressed():
 func _on_Button_enter_pressed():
 	if tutend == true:
 		var tutorial_node = get_parent().get_parent().get_parent()
-		var solution = tutorial_node.getPassword()
+		var solution = tutorial_node.getPassword_rot()
 		var time = tutorial_node.getTime()
-		#$Trials.clear()
 	
 		if(solution == password):
 			var tab = $ColorRect.get_parent()
@@ -57,14 +56,14 @@ func _on_Button_enter_pressed():
 			tutorial_node.setTime(time)
 			
 			if(trials == 3):
-				Textbox.next_dialog6()
+				Textbox.next_dialog2()
 			
 			if(trials == 2):
-				Textbox.next_dialog7()
-				#$Trials.add_text("Die Lösung versteckt sich in einem Instagrampost, der sein Geburtsdatum als Passwort benutzt.")
+				Textbox.next_dialog3()
+
 			
 			if(trials == 1):
-				Textbox.next_dialog8()
+				Textbox.next_dialog5()
 				time += 50
 				tutorial_node.setTime(time)
 				trials = 4
