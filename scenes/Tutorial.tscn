@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://assets/background.jpg" type="Texture" id=1]
 [ext_resource path="res://assets/background Kopie.jpg" type="Texture" id=2]
@@ -12,13 +12,13 @@
 [ext_resource path="res://scenes/TippEffekt.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Pfeil.png" type="Texture" id=11]
 [ext_resource path="res://scripts/TutorialText.gd" type="Script" id=12]
-[ext_resource path="res://assets/auftraggeber.png" type="Texture" id=13]
 [ext_resource path="res://assets/MusikSounds/rclick-13693.mp3" type="AudioStream" id=14]
 [ext_resource path="res://assets/MusikSounds/detective-15646.mp3" type="AudioStream" id=15]
 [ext_resource path="res://assets/MusikSounds/text-sound-4-30218.mp3" type="AudioStream" id=16]
 [ext_resource path="res://scenes/Pausemenu.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/Levelende.tscn" type="PackedScene" id=18]
 [ext_resource path="res://assets/flash.tres" type="Shader" id=19]
+[ext_resource path="res://assets/tips colleague.png" type="Texture" id=20]
 
 [sub_resource type="ShaderMaterial" id=36]
 resource_local_to_scene = true
@@ -46,12 +46,6 @@ extents = Vector2( 24, 277 )
 
 [sub_resource type="RectangleShape2D" id=33]
 extents = Vector2( 25.5, 273 )
-
-[sub_resource type="StyleBoxFlat" id=2]
-bg_color = Color( 1, 1, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 1, 1, 1, 1 )
 
 [sub_resource type="Animation" id=24]
 length = 0.001
@@ -423,19 +417,19 @@ rotation = 1.5708
 
 [node name="Tab" parent="BackgroundLeft/Ordner/Ordner_Links_1" instance=ExtResource( 7 )]
 visible = false
-position = Vector2( 231, 322 )
+position = Vector2( 231, 301 )
 rotation = 1.5708
 
 [node name="Ordner_Links_2" type="Node2D" parent="BackgroundLeft/Ordner"]
 
 [node name="Ordner" parent="BackgroundLeft/Ordner/Ordner_Links_2" instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 376, 204 )
+position = Vector2( 376, 201 )
 rotation = 1.5708
 
 [node name="Tab" parent="BackgroundLeft/Ordner/Ordner_Links_2" instance=ExtResource( 9 )]
 visible = false
-position = Vector2( 179, 217 )
+position = Vector2( 205, 201 )
 rotation = 1.5708
 scale = Vector2( 0.8, 0.8 )
 
@@ -443,7 +437,7 @@ scale = Vector2( 0.8, 0.8 )
 
 [node name="Ordner" parent="BackgroundLeft/Ordner_Links_Rot" instance=ExtResource( 5 )]
 visible = false
-position = Vector2( 373, 101 )
+position = Vector2( 376, 101 )
 rotation = 1.5708
 
 [node name="FileRed" parent="BackgroundLeft/Ordner_Links_Rot/Ordner" index="0"]
@@ -488,12 +482,12 @@ __meta__ = {
 
 [node name="Ordner" parent="BackgroundRight/Ordner/Ordner_Rechts_1" instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 96, 306 )
+position = Vector2( 96, 301 )
 rotation = 4.71239
 
 [node name="Tab" parent="BackgroundRight/Ordner/Ordner_Rechts_1" instance=ExtResource( 6 )]
 visible = false
-position = Vector2( 250, 322 )
+position = Vector2( 225, 301 )
 rotation = -1.5708
 scale = Vector2( 0.4, 0.4 )
 
@@ -501,12 +495,12 @@ scale = Vector2( 0.4, 0.4 )
 
 [node name="Ordner" parent="BackgroundRight/Ordner/Ordner_Rechts_2" instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 95, 208 )
+position = Vector2( 96, 201 )
 rotation = 4.71239
 
 [node name="Tab" parent="BackgroundRight/Ordner/Ordner_Rechts_2" instance=ExtResource( 9 )]
 visible = false
-position = Vector2( 293, 219 )
+position = Vector2( 265, 201 )
 rotation = -1.5708
 scale = Vector2( 0.8, 0.8 )
 
@@ -515,7 +509,7 @@ rotation = 4.71239
 
 [node name="Ordner" parent="BackgroundRight/Ordner_Rechts_Rot" instance=ExtResource( 5 )]
 visible = false
-position = Vector2( -101, 97 )
+position = Vector2( -101, 96 )
 rotation = 6.28319
 
 [node name="FileRed" parent="BackgroundRight/Ordner_Rechts_Rot/Ordner" index="0"]
@@ -524,7 +518,7 @@ material = SubResource( 37 )
 
 [node name="Tab" parent="BackgroundRight/Ordner_Rechts_Rot" instance=ExtResource( 4 )]
 visible = false
-position = Vector2( -528, 48.0005 )
+position = Vector2( -250, 60 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="ColorRect" type="ColorRect" parent="BackgroundRight"]
@@ -598,38 +592,6 @@ valign = 1
 
 [node name="ScoreTimer" type="Timer" parent="."]
 
-[node name="CongratulationLabelLeft" type="Label" parent="."]
-visible = false
-margin_left = 700.0
-margin_top = 470.0
-margin_right = 1100.0
-margin_bottom = 570.0
-rect_rotation = 270.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_styles/normal = SubResource( 2 )
-text = "Placeholder"
-align = 1
-valign = 1
-uppercase = true
-
-[node name="CongratulationLabelRight" type="Label" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = 260.0
-margin_top = 70.0
-margin_right = 660.0
-margin_bottom = 170.0
-rect_rotation = 90.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_styles/normal = SubResource( 3 )
-text = "Placeholder"
-align = 1
-valign = 1
-uppercase = true
-
 [node name="Textbox" type="Control" parent="."]
 margin_right = 40.0
 script = ExtResource( 12 )
@@ -641,11 +603,10 @@ color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( 8, 8, 80, 8, 80, 528, 8, 528 )
 
 [node name="Icon" type="Sprite" parent="Textbox/Polygon2D"]
-position = Vector2( 53.8182, 68.2899 )
+position = Vector2( 62, 42 )
 rotation = 1.5708
-scale = Vector2( 0.0942029, 0.0818182 )
-texture = ExtResource( 13 )
-flip_h = true
+scale = Vector2( 0.025, 0.025 )
+texture = ExtResource( 20 )
 
 [node name="Polygon2D2" type="Polygon2D" parent="Textbox"]
 position = Vector2( 870.222, -16.6154 )
@@ -654,11 +615,10 @@ color = Color( 0, 0, 0, 1 )
 polygon = PoolVector2Array( 8, 8, 80, 8, 80, 528, 8, 528 )
 
 [node name="Icon2" type="Sprite" parent="Textbox/Polygon2D2"]
-position = Vector2( 32.5455, 470.429 )
+position = Vector2( 25, 494 )
 rotation = -1.5708
-scale = Vector2( 0.0928571, 0.0818182 )
-texture = ExtResource( 13 )
-flip_h = true
+scale = Vector2( 0.025, 0.025 )
+texture = ExtResource( 20 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Textbox"]
 margin_left = 64.0
@@ -831,16 +791,19 @@ anims/RESET = SubResource( 22 )
 anims/show = SubResource( 23 )
 
 [node name="Textblub" type="AudioStreamPlayer2D" parent="Textbox"]
+position = Vector2( 480, 270 )
 stream = ExtResource( 16 )
 volume_db = -20.0
 bus = "SFX"
 
 [node name="BGM Tutorial" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 480, 270 )
 stream = ExtResource( 15 )
 volume_db = -20.0
 bus = "Music"
 
 [node name="Click" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 480, 270 )
 stream = ExtResource( 14 )
 volume_db = -15.0
 bus = "SFX"
@@ -851,7 +814,7 @@ margin_top = 112.0
 margin_right = 569.0
 margin_bottom = 132.0
 rect_rotation = 90.0
-text = "Kaffee Pause!"
+text = "Kaffee-Pause!"
 
 [node name="Pause2" type="Button" parent="."]
 margin_left = 488.0
@@ -859,7 +822,7 @@ margin_top = 392.0
 margin_right = 585.0
 margin_bottom = 412.0
 rect_rotation = -90.0
-text = "Kaffee Pause!"
+text = "Kaffee-Pause!"
 
 [node name="GUI" type="CanvasLayer" parent="."]
 

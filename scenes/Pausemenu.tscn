@@ -53,9 +53,9 @@ rect_pivot_offset = Vector2( 270.956, -1.44485 )
 
 [node name="Menu1" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 1.0
-margin_top = 41.0
+margin_top = 42.0
 margin_right = 541.0
-margin_bottom = 402.0
+margin_bottom = 403.0
 
 [node name="Text" type="Label" parent="CenterContainer/Menu1"]
 margin_right = 540.0
@@ -63,7 +63,7 @@ margin_bottom = 74.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0.411765, 0.411765, 0.411765, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Kaffee Pause!"
+text = "Kaffee-Pause!"
 align = 1
 
 [node name="MINDESTABSTAND" type="Control" parent="CenterContainer/Menu1"]
@@ -110,9 +110,9 @@ rect_min_size = Vector2( 0, 60 )
 [node name="Optionen" type="VBoxContainer" parent="CenterContainer"]
 visible = false
 margin_left = 28.0
-margin_top = 14.0
+margin_top = 15.0
 margin_right = 515.0
-margin_bottom = 429.0
+margin_bottom = 430.0
 rect_pivot_offset = Vector2( -510, 28 )
 
 [node name="Text" type="Label" parent="CenterContainer/Optionen"]
@@ -248,7 +248,7 @@ custom_styles/normal = SubResource( 3 )
 text = "Zurück"
 
 [node name="Menu_Swap" parent="." instance=ExtResource( 3 )]
-position = Vector2( 29, 441 )
+position = Vector2( 480, 270 )
 
 [connection signal="pressed" from="CenterContainer/Menu1/WeiterButton" to="." method="_on_WeiterButton_pressed"]
 [connection signal="pressed" from="CenterContainer/Menu1/OptionsButton" to="." method="_on_OptionsButton_pressed"]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scripts/hauptmenu.gd" type="Script" id=1]
 [ext_resource path="res://assets/MusikSounds/deep-slow-beat-2-21098.mp3" type="AudioStream" id=2]
-[ext_resource path="res://assets/lupe.jpg" type="Texture" id=3]
+[ext_resource path="res://assets/Deckblatt.jpg" type="Texture" id=3]
 [ext_resource path="res://assets/Xolonium-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/Musik_Sounds/Menu_Swap.tscn" type="PackedScene" id=5]
 
@@ -15,73 +15,163 @@ size = 40
 font_data = ExtResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.0509804, 0.0627451, 0.905882, 1 )
+bg_color = Color( 0.0509804, 0.0627451, 0.905882, 0 )
 
 [sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.0509804, 0.0627451, 0.905882, 1 )
+bg_color = Color( 0.0509804, 0.0627451, 0.905882, 0 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 40
 font_data = ExtResource( 4 )
 
+[sub_resource type="Animation" id=7]
+length = 0.001
+
+[sub_resource type="Animation" id=8]
+resource_name = "menu_start"
+tracks/0/type = "value"
+tracks/0/path = NodePath("CenterContainer:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 960, 0 ), Vector2( 368, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("TextureRect:rect_position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -226, -1300 ), Vector2( -541, -945 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("hauptmenu:rect_position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 960, 0 ), Vector2( 367, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("TextureRect:rect_size")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1809, 2123 ), Vector2( 1463, 1717 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Label:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Label:rect_position")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 201, 65 ), Vector2( -560, 65 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 485.5, 278.5 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 70
+outline_color = Color( 0.482353, 0.427451, 0.568627, 1 )
+font_data = ExtResource( 4 )
+
 [node name="hauptmenu" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="hauptmenu" type="ColorRect" parent="."]
-margin_right = 960.0
-margin_bottom = 540.0
-mouse_filter = 2
-color = Color( 0.74902, 0.576471, 0.423529, 1 )
-
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 460.0
-margin_bottom = 540.0
+margin_left = -226.0
+margin_top = -1300.0
+margin_right = 1583.0
+margin_bottom = 823.0
 rect_scale = Vector2( 0.8, 1 )
 mouse_filter = 2
 texture = ExtResource( 3 )
 expand = true
 
+[node name="hauptmenu" type="ColorRect" parent="."]
+margin_left = 960.0
+margin_right = 1553.0
+margin_bottom = 540.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 369.0
-margin_right = 969.0
-margin_bottom = 540.0
+margin_left = 960.0
+margin_right = 1560.0
+margin_bottom = 541.0
 
 [node name="Menu1" type="VBoxContainer" parent="CenterContainer"]
-margin_top = 89.0
-margin_right = 600.0
-margin_bottom = 450.0
+margin_left = 5.0
+margin_top = 90.0
+margin_right = 595.0
+margin_bottom = 451.0
 
 [node name="Text" type="Label" parent="CenterContainer/Menu1"]
-margin_right = 600.0
+margin_right = 590.0
 margin_bottom = 74.0
-custom_colors/font_color = Color( 0.0509804, 0.0627451, 0.905882, 1 )
-custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.482353, 0.427451, 0.564706, 1 )
 custom_fonts/font = SubResource( 3 )
-text = "Daten-Detektiv"
+text = "Willkommen!"
 align = 1
 
 [node name="MINDESTABSTAND" type="Control" parent="CenterContainer/Menu1"]
 margin_top = 78.0
-margin_right = 600.0
+margin_right = 590.0
 margin_bottom = 138.0
 rect_min_size = Vector2( 0, 60 )
 rect_pivot_offset = Vector2( -861, -116 )
 
 [node name="FälleButton" type="Button" parent="CenterContainer/Menu1"]
 margin_top = 142.0
-margin_right = 600.0
+margin_right = 590.0
 margin_bottom = 191.0
-rect_min_size = Vector2( 600, 0 )
+rect_min_size = Vector2( 590, 0 )
 custom_fonts/font = SubResource( 2 )
 custom_styles/normal = SubResource( 4 )
 text = "Fälle"
 
 [node name="OptionsButton" type="Button" parent="CenterContainer/Menu1"]
 margin_top = 195.0
-margin_right = 600.0
+margin_right = 590.0
 margin_bottom = 244.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/normal = SubResource( 5 )
@@ -89,7 +179,7 @@ text = "Optionen"
 
 [node name="QuitButton" type="Button" parent="CenterContainer/Menu1"]
 margin_top = 248.0
-margin_right = 600.0
+margin_right = 590.0
 margin_bottom = 297.0
 custom_fonts/font = SubResource( 2 )
 custom_styles/normal = SubResource( 4 )
@@ -97,22 +187,22 @@ text = "Beenden"
 
 [node name="MINDESTABSTAND2" type="Control" parent="CenterContainer/Menu1"]
 margin_top = 301.0
-margin_right = 600.0
+margin_right = 590.0
 margin_bottom = 361.0
 rect_min_size = Vector2( 0, 60 )
 
 [node name="Options" type="VBoxContainer" parent="CenterContainer"]
 visible = false
 margin_left = 26.0
-margin_top = 42.0
+margin_top = 43.0
 margin_right = 573.0
-margin_bottom = 497.0
+margin_bottom = 498.0
 
 [node name="Text" type="Label" parent="CenterContainer/Options"]
 margin_right = 547.0
 margin_bottom = 74.0
-custom_colors/font_color = Color( 0.0509804, 0.0627451, 0.905882, 1 )
-custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.470588, 0.439216, 0.6, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Optionen"
 align = 1
@@ -136,7 +226,8 @@ margin_right = 235.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 235, 50 )
 size_flags_horizontal = 0
-custom_colors/font_color = Color( 0.0509804, 0.0627451, 0.905882, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "Fullscreen"
 
@@ -165,7 +256,7 @@ dragger_visibility = 1
 margin_right = 235.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 235, 50 )
-custom_colors/font_color = Color( 0.0509804, 0.0627451, 0.905882, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "Master Vol"
 
@@ -187,7 +278,7 @@ dragger_visibility = 1
 margin_right = 235.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 235, 50 )
-custom_colors/font_color = Color( 0.0509804, 0.0627451, 0.905882, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "Musik"
 
@@ -208,7 +299,7 @@ margin_bottom = 378.0
 margin_right = 235.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 235, 50 )
-custom_colors/font_color = Color( 0.0509804, 0.0627451, 0.905882, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "SFX"
 
@@ -236,15 +327,15 @@ text = "Zurück"
 
 [node name="Faelle" type="VBoxContainer" parent="CenterContainer"]
 visible = false
-margin_top = 89.0
+margin_top = 90.0
 margin_right = 600.0
-margin_bottom = 450.0
+margin_bottom = 451.0
 
 [node name="Text" type="Label" parent="CenterContainer/Faelle"]
 margin_right = 600.0
 margin_bottom = 74.0
-custom_colors/font_color = Color( 0.0509804, 0.0627451, 0.905882, 1 )
-custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0.482353, 0.427451, 0.568627, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Los gehts!"
 align = 1
@@ -288,12 +379,40 @@ margin_bottom = 361.0
 rect_min_size = Vector2( 0, 60 )
 
 [node name="BGM Menu" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 480, 270 )
 stream = ExtResource( 2 )
 volume_db = -20.0
 bus = "Music"
 
 [node name="Menu_Swap" parent="." instance=ExtResource( 5 )]
+position = Vector2( 480, 270 )
 bus = "SFX"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 7 )
+anims/menu_start = SubResource( 8 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 475.5, 268.5 )
+shape = SubResource( 10 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 201.0
+margin_top = 65.0
+margin_right = 768.0
+margin_bottom = 163.0
+custom_colors/font_color_shadow = Color( 0.466667, 0.443137, 0.623529, 1 )
+custom_constants/shadow_offset_x = 5
+custom_constants/shadow_offset_y = 5
+custom_constants/shadow_as_outline = 0
+custom_fonts/font = SubResource( 9 )
+text = "Daten Detektiv"
 
 [connection signal="pressed" from="CenterContainer/Menu1/FälleButton" to="." method="_on_FlleButton_pressed"]
 [connection signal="pressed" from="CenterContainer/Menu1/OptionsButton" to="." method="_on_OptionsButton_pressed"]
@@ -306,3 +425,4 @@ bus = "SFX"
 [connection signal="pressed" from="CenterContainer/Faelle/TutorialButton" to="." method="_on_TutorialButton_pressed"]
 [connection signal="pressed" from="CenterContainer/Faelle/Level1Button" to="." method="_on_Level1Button_pressed"]
 [connection signal="pressed" from="CenterContainer/Faelle/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
