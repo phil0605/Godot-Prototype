@@ -115,3 +115,7 @@ func _on_TrialTimer_timeout():
 	$Trials.visible = false
 	$Trials.clear()
 	
+
+
+func _on_Button_clear_pressed():
+	password = "" # Replace with function body.

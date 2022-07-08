@@ -56,10 +56,10 @@ text = "0"
 [node name="Input_field_label" type="Label" parent="ColorRect"]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -70.0
-margin_top = 49.0
-margin_right = 70.0
-margin_bottom = 65.0
+margin_left = -90.0
+margin_top = 47.0
+margin_right = 50.0
+margin_bottom = 67.0
 custom_styles/normal = SubResource( 1 )
 align = 1
 valign = 1
@@ -141,6 +141,13 @@ margin_right = 255.0
 margin_bottom = 135.0
 text = "9"
 
+[node name="Button_clear" type="Button" parent="ColorRect"]
+margin_left = 200.0
+margin_top = 47.0
+margin_right = 243.0
+margin_bottom = 67.0
+text = "clear"
+
 [node name="Trials" type="RichTextLabel" parent="."]
 margin_left = 336.0
 margin_top = 88.0
@@ -168,4 +175,5 @@ wait_time = 5.0
 [connection signal="pressed" from="ColorRect/Button_7" to="." method="_on_Button_7_pressed"]
 [connection signal="pressed" from="ColorRect/Button_8" to="." method="_on_Button_8_pressed"]
 [connection signal="pressed" from="ColorRect/Button_9" to="." method="_on_Button_9_pressed"]
+[connection signal="pressed" from="ColorRect/Button_clear" to="." method="_on_Button_clear_pressed"]
 [connection signal="timeout" from="TrialTimer" to="." method="_on_TrialTimer_timeout"]
