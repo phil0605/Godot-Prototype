@@ -14,7 +14,7 @@ func tutorial_end():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$ColorRect/Input_field_label.add_color_override("font_color", Color.black)
+	$ColorRect/Input_field_label.add_color_override("font_color", Color.white)
 	$ColorRect/Input_field_label.text = password
 	
 	# checks, whether time's up and we need to close the input_field
