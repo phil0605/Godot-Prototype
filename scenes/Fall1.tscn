@@ -214,12 +214,12 @@ __meta__ = {
 
 [node name="Ordner" parent="BackgroundLeft/Ordner/Ordner_Links_1" instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 376, 300 )
+position = Vector2( 376, 200 )
 rotation = 1.5708
 
 [node name="Tab" parent="BackgroundLeft/Ordner/Ordner_Links_1" instance=ExtResource( 22 )]
 visible = false
-position = Vector2( 231, 300 )
+position = Vector2( 231, 200 )
 rotation = 1.5708
 scale = Vector2( 0.7, 0.7 )
 
@@ -227,12 +227,12 @@ scale = Vector2( 0.7, 0.7 )
 
 [node name="Ordner" parent="BackgroundLeft/Ordner/Ordner_Links_2" instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 376, 200 )
+position = Vector2( 376, 300 )
 rotation = 1.5708
 
 [node name="Tab" parent="BackgroundLeft/Ordner/Ordner_Links_2" instance=ExtResource( 21 )]
 visible = false
-position = Vector2( 231, 200 )
+position = Vector2( 231, 300 )
 rotation = 1.5708
 scale = Vector2( 0.7, 0.7 )
 
@@ -321,12 +321,12 @@ __meta__ = {
 
 [node name="Ordner" parent="BackgroundRight/Ordner/Ordner_Rechts_1" instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 104, 340 )
+position = Vector2( 104, 240 )
 rotation = 4.71239
 
 [node name="Tab" parent="BackgroundRight/Ordner/Ordner_Rechts_1" instance=ExtResource( 21 )]
 visible = false
-position = Vector2( 250, 340 )
+position = Vector2( 250, 240 )
 rotation = 4.71239
 scale = Vector2( 0.7, 0.7 )
 
@@ -334,12 +334,12 @@ scale = Vector2( 0.7, 0.7 )
 
 [node name="Ordner" parent="BackgroundRight/Ordner/Ordner_Rechts_2" instance=ExtResource( 3 )]
 visible = false
-position = Vector2( 104, 240 )
+position = Vector2( 104, 340 )
 rotation = 4.71239
 
 [node name="Tab" parent="BackgroundRight/Ordner/Ordner_Rechts_2" instance=ExtResource( 22 )]
 visible = false
-position = Vector2( 250, 240 )
+position = Vector2( 250, 340 )
 rotation = 4.71239
 scale = Vector2( 0.7, 0.7 )
 

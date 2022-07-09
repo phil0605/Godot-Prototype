@@ -175,11 +175,9 @@ func load_dialog1():
 			page1 += 1
 			
 	elif $RichTextLabel.percent_visible == 1 and page1 >= dialog1.size():
-		Or1L.visible = true
 		Or2L.visible = true
 		OrGelbL.visible = true
 		Or1R.visible = true
-		Or2R.visible = true
 		Or5R.visible = true
 		IGL.tutorial_end()
 		main.start_now()
@@ -305,6 +303,8 @@ func load_dialog_gelb_end():
 			
 	elif $RichTextLabel.percent_visible == 1 and page_gelb_end >= dialog_gelb_end.size():
 		IRR.tutorial_end()
+		Or1L.visible = true
+		Or2R.visible = true
 		Or3L.visible = true
 		Or3R.visible = true
 		Or4L.visible = true
