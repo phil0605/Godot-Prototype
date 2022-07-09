@@ -5,8 +5,7 @@ var dialog1 = ["Willkommen zurück!",
 			   "Diesmal habt ihr 15 Minuten Zeit.", 
 			   "Ich habe das Gefühl, die Cäsar-Verschlüsselung wird uns hier weiterhelfen.", 
 			   "Viel Erfolg! Los gehts!"]
-var dialog2 = ["Schade, das war leider falsch! Aber kein Problem, wir haben noch 2 Versuche.",
-				"Gebt jetzt nicht auf und macht weiter!"]
+var dialog2 = ["Schade, das war leider falsch! Aber kein Problem, wir haben noch 2 Versuche. Gebt jetzt nicht auf und macht weiter!"]
 				
 var dialog3 = ["Mist, schon wieder nicht richtig! Jetzt ist nur noch 1 Versuch übrig, bevor wir 60 Sekunden verlieren.",
 				"Ich glaube ich habe eine Idee, beim nächsten Mal gebe ich euch einen Tipp!"]
@@ -17,8 +16,7 @@ var dialog4 = ["Okay, jetzt haben wir eine Minute Strafe bekommen, aber das mach
 				
 var dialog5 = ["Okay, jetzt haben wir eine Minute Strafe bekommen, aber das macht nichts.",
 				"Ich glaube wir sollten nach einer Zahl suchen und sie mithilfe der Cäsar-Verschlüsselung entschlüsseln.",
-				 "Der Key, also der Schlüssel, muss hier auch irgendwo stehen.",
-				"Ave Römer!"]
+				 "Der Key, also der Schlüssel, muss hier auch irgendwo stehen. Ave Römer!"]
 				
 var dialog_gelb_end = ["Sehr gut! Hätte er mal ein individuelles Passwort genommen. Aber so macht es das für uns leichter."]
 var dialog_end  = ["Gut gemacht!", 
@@ -311,6 +309,7 @@ func load_dialog_gelb_end():
 		Or4R.visible = true
 		Or5L.visible = true
 		OrRotR.visible = true
+		OrGelbL.get_child(0).get_child(0).visible = false
 		self.visible = false
 		Teil_gelb_end = false
 
