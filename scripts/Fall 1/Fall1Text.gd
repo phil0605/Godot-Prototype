@@ -280,6 +280,7 @@ func load_dialog5():
 		Teil4 = false
 		
 func load_dialog_gelb_end():
+	OrGelbL.get_child(0).get_child(0).visible = false
 	if page_gelb_end < dialog_gelb_end.size():
 		if $RichTextLabel.percent_visible == 1:
 			finished = false
@@ -309,7 +310,6 @@ func load_dialog_gelb_end():
 		Or4R.visible = true
 		Or5L.visible = true
 		OrRotR.visible = true
-		OrGelbL.get_child(0).get_child(0).visible = false
 		self.visible = false
 		Teil_gelb_end = false
 
