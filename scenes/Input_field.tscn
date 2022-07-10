@@ -155,15 +155,15 @@ border_color = Color( 1, 0, 0, 1 )
 script = ExtResource( 1 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 150.5, 261.5 )
-scale = Vector2( 1.505, 1.735 )
+position = Vector2( 150.5, 241 )
+scale = Vector2( 1.505, 1.53 )
 texture = ExtResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_left = 1.0
 margin_top = 88.0
 margin_right = 301.0
-margin_bottom = 434.0
+margin_bottom = 393.0
 color = Color( 0.309804, 0.309804, 0.309804, 1 )
 
 [node name="Minimize" type="Button" parent="ColorRect"]
@@ -201,10 +201,10 @@ align = 1
 valign = 1
 
 [node name="ColorRectEntf" type="ColorRect" parent="ColorRect"]
-margin_left = 98.0
-margin_top = 279.0
-margin_right = 171.0
-margin_bottom = 317.0
+margin_left = 99.0
+margin_top = 258.0
+margin_right = 172.0
+margin_bottom = 296.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_entf" type="Button" parent="ColorRect/ColorRectEntf"]
@@ -222,10 +222,10 @@ custom_styles/normal = SubResource( 9 )
 text = "ENTF"
 
 [node name="ColorRect0" type="ColorRect" parent="ColorRect"]
-margin_left = 14.0
-margin_top = 279.0
-margin_right = 87.0
-margin_bottom = 317.0
+margin_left = 15.0
+margin_top = 258.0
+margin_right = 88.0
+margin_bottom = 296.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_0" type="Button" parent="ColorRect/ColorRect0"]
@@ -243,10 +243,10 @@ custom_styles/normal = SubResource( 6 )
 text = "0"
 
 [node name="ColorRectEnter" type="ColorRect" parent="ColorRect"]
-margin_left = 183.0
-margin_top = 279.0
-margin_right = 286.0
-margin_bottom = 317.0
+margin_left = 184.0
+margin_top = 258.0
+margin_right = 287.0
+margin_bottom = 296.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_enter" type="Button" parent="ColorRect/ColorRectEnter"]
@@ -264,10 +264,10 @@ custom_styles/normal = SubResource( 11 )
 text = "ENTER"
 
 [node name="ColorRect1" type="ColorRect" parent="ColorRect"]
-margin_left = 14.0
-margin_top = 219.0
-margin_right = 87.0
-margin_bottom = 257.0
+margin_left = 15.0
+margin_top = 198.0
+margin_right = 88.0
+margin_bottom = 236.0
 rect_pivot_offset = Vector2( 119, 30 )
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
@@ -286,10 +286,10 @@ custom_styles/normal = SubResource( 13 )
 text = "1"
 
 [node name="ColorRect2" type="ColorRect" parent="ColorRect"]
-margin_left = 98.0
-margin_top = 219.0
-margin_right = 171.0
-margin_bottom = 257.0
+margin_left = 99.0
+margin_top = 198.0
+margin_right = 172.0
+margin_bottom = 236.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_2" type="Button" parent="ColorRect/ColorRect2"]
@@ -307,10 +307,10 @@ custom_styles/normal = SubResource( 15 )
 text = "2"
 
 [node name="ColorRect3" type="ColorRect" parent="ColorRect"]
-margin_left = 183.0
-margin_top = 219.0
-margin_right = 256.0
-margin_bottom = 257.0
+margin_left = 184.0
+margin_top = 198.0
+margin_right = 257.0
+margin_bottom = 236.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_3" type="Button" parent="ColorRect/ColorRect3"]
@@ -328,10 +328,10 @@ custom_styles/normal = SubResource( 17 )
 text = "3"
 
 [node name="ColorRect4" type="ColorRect" parent="ColorRect"]
-margin_left = 14.0
-margin_top = 159.0
-margin_right = 87.0
-margin_bottom = 197.0
+margin_left = 15.0
+margin_top = 138.0
+margin_right = 88.0
+margin_bottom = 176.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_4" type="Button" parent="ColorRect/ColorRect4"]
@@ -349,10 +349,10 @@ custom_styles/normal = SubResource( 19 )
 text = "4"
 
 [node name="ColorRect5" type="ColorRect" parent="ColorRect"]
-margin_left = 98.0
-margin_top = 159.0
-margin_right = 171.0
-margin_bottom = 197.0
+margin_left = 99.0
+margin_top = 138.0
+margin_right = 172.0
+margin_bottom = 176.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_5" type="Button" parent="ColorRect/ColorRect5"]
@@ -370,10 +370,10 @@ custom_styles/normal = SubResource( 21 )
 text = "5"
 
 [node name="ColorRect6" type="ColorRect" parent="ColorRect"]
-margin_left = 183.0
-margin_top = 159.0
-margin_right = 256.0
-margin_bottom = 197.0
+margin_left = 184.0
+margin_top = 138.0
+margin_right = 257.0
+margin_bottom = 176.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_6" type="Button" parent="ColorRect/ColorRect6"]
@@ -391,10 +391,10 @@ custom_styles/normal = SubResource( 23 )
 text = "6"
 
 [node name="ColorRect7" type="ColorRect" parent="ColorRect"]
-margin_left = 14.0
-margin_top = 99.0
-margin_right = 87.0
-margin_bottom = 137.0
+margin_left = 15.0
+margin_top = 78.0
+margin_right = 88.0
+margin_bottom = 116.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_7" type="Button" parent="ColorRect/ColorRect7"]
@@ -412,10 +412,10 @@ custom_styles/normal = ExtResource( 2 )
 text = "7"
 
 [node name="ColorRect8" type="ColorRect" parent="ColorRect"]
-margin_left = 98.0
-margin_top = 99.0
-margin_right = 171.0
-margin_bottom = 137.0
+margin_left = 99.0
+margin_top = 78.0
+margin_right = 172.0
+margin_bottom = 116.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_8" type="Button" parent="ColorRect/ColorRect8"]
@@ -433,10 +433,10 @@ custom_styles/normal = SubResource( 27 )
 text = "8"
 
 [node name="ColorRect9" type="ColorRect" parent="ColorRect"]
-margin_left = 183.0
-margin_top = 99.0
-margin_right = 256.0
-margin_bottom = 137.0
+margin_left = 184.0
+margin_top = 78.0
+margin_right = 257.0
+margin_bottom = 116.0
 color = Color( 0.239216, 0.239216, 0.239216, 1 )
 
 [node name="Button_9" type="Button" parent="ColorRect/ColorRect9"]
