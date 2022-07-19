@@ -99,7 +99,7 @@ tracks/5/keys = {
 "times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 201, 65 ), Vector2( -560, 65 ) ]
+"values": [ Vector2( 150, 65 ), Vector2( -560, 65 ) ]
 }
 
 [sub_resource type="RectangleShape2D" id=10]
@@ -403,9 +403,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = 121.0
+margin_left = 150.0
 margin_top = 65.0
-margin_right = 836.0
+margin_right = 865.0
 margin_bottom = 163.0
 custom_colors/font_color_shadow = Color( 0.466667, 0.443137, 0.623529, 1 )
 custom_constants/shadow_offset_x = 5
