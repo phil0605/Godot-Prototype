@@ -1,7 +1,7 @@
 [gd_scene load_steps=52 format=2]
 
-[ext_resource path="res://assets/BG/BG L.jpg" type="Texture" id=1]
-[ext_resource path="res://assets/BG/BG R.jpg" type="Texture" id=2]
+[ext_resource path="res://BG/BG L.jpg" type="Texture" id=1]
+[ext_resource path="res://BG/BG R.jpg" type="Texture" id=2]
 [ext_resource path="res://scenes/Ordner.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/Input_field.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/Ordner_rot.tscn" type="PackedScene" id=5]
